@@ -37,7 +37,21 @@ header{position:sticky;top:0;z-index:20;background:#f7f4eef0;border-bottom:1px s
 }
 .nav-cta{background:var(--navy);color:white;padding:11px 16px;border-radius:4px}
 .hero{padding:86px 0 72px;overflow:hidden}
-.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:55px;align-items:center}
+.hero-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:30px;
+  align-items:center;
+}
+.sector-shortcuts{
+  grid-column:1 / -1;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:8px;
+  margin-top:24px;
+  width:100%;
+}
 .kicker{display:inline-flex;align-items:center;gap:9px;text-transform:uppercase;letter-spacing:2px;font-size:.73rem;font-weight:800;color:var(--terracotta)}
 .kicker:before{content:"";display:block;width:25px;height:2px;background:currentColor}
 h1,h2,h3,p{margin-top:0}
