@@ -24,14 +24,12 @@
 html{scroll-behavior:smooth;scroll-padding-top:90px}
 body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.65}
 a{color:inherit;text-decoration:none}
-button,a{ -webkit-tap-highlight-color:transparent }
+button,a{-webkit-tap-highlight-color:transparent}
 .wrap{width:min(1160px,90%);margin:auto}
 header{position:sticky;top:0;z-index:20;background:#f7f4eef0;border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}
 .nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:25px}
-.brand{font-size:1rem;font-weight:900;letter-spacing:-.4px;color:var(--navy);line-height:1.2}
-.brand span{display:block;color:var(--terracotta);font-size:.72rem;letter-spacing:2px;margin-top:5px}
-nav{display:flex;gap:24px;align-items:center;font-size:.88rem;font-weight:700}
-nav a:hover{color:var(--terracotta)}
+.brand{display:flex;align-items:center;font-size:1rem;font-weight:900;letter-spacing:-.4px;color:var(--navy);line-height:1.2}
+.brand-logo{display:block;width:58px;height:58px;object-fit:contain}
 .nav-cta{background:var(--navy);color:white;padding:11px 16px;border-radius:4px}
 .hero{padding:86px 0 72px;overflow:hidden}
 .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:55px;align-items:center}
@@ -138,7 +136,9 @@ footer strong{color:var(--yellow)}
 <body>
 <header>
   <div class="wrap nav">
-    <a class="brand" href="#accueil">LE COMPTOIR <span>DIGITAL SHOP</span></a>
+    <a class="brand" href="#accueil" aria-label="Le Comptoir Digital Shop — Accueil">
+      <img src="Logo%20circulaire%20dor%C3%A9%20Comptoir%20Digital.png" alt="Le Comptoir Digital Shop" class="brand-logo">
+    </a>
     <nav aria-label="Navigation principale">
       <a href="#services">Services</a>
       <a href="#portfolio">Univers</a>
@@ -245,7 +245,6 @@ footer strong{color:var(--yellow)}
       <h3>Parlons de votre projet</h3>
       <p>Envoyez-nous un message privé sur Instagram pour démarrer la discussion.</p>
       <a class="btn" href="https://www.instagram.com/lecomptoirdigitalshop/" target="_blank" rel="noopener noreferrer">Nous contacter sur Instagram ↗</a>
-      <p class="note">.</p>
     </div>
   </div>
 </section>
