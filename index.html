@@ -308,6 +308,81 @@ footer strong{color:var(--yellow)}
   }
 }
 
+/* Ajustement de la bannière d'accueil */
+.hero {
+  padding-top: 38px;
+  padding-bottom: 38px;
+}
+
+.hero-grid {
+  align-items: center;
+  gap: 48px;
+}
+
+.hero-content h1 {
+  font-size: clamp(2.6rem, 4vw, 4rem);
+  line-height: 1.04;
+  letter-spacing: -0.045em;
+  margin: 18px 0;
+}
+
+.hero-content .lead {
+  font-size: 1.05rem;
+  line-height: 1.55;
+  margin-bottom: 18px;
+}
+
+.hero-benefits {
+  gap: 12px;
+  margin: 18px 0;
+}
+
+.hero-benefit p {
+  font-size: .88rem;
+  line-height: 1.4;
+}
+
+.hero-slideshow {
+  height: min(430px, 55vh);
+  min-height: 320px;
+}
+
+.hero-content .actions {
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.hero-content .btn {
+  padding: 13px 18px;
+  font-size: .92rem;
+}
+
+.hero-content .note {
+  font-size: .85rem;
+  margin-top: 14px;
+}
+
+@media (min-width: 801px) {
+  .hero-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 800px) {
+  .hero {
+    padding-top: 28px;
+    padding-bottom: 28px;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(2.4rem, 8vw, 3.4rem);
+  }
+
+  .hero-slideshow {
+    height: 380px;
+  }
+}
+
 </style>
 </head>
 <body>
