@@ -29,11 +29,11 @@ button,a{-webkit-tap-highlight-color:transparent}
 header{position:sticky;top:0;z-index:20;background:#f7f4eef0;border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}
 .nav{min-height:116px;display:flex;align-items:center;justify-content:space-between;gap:25px}
 .brand{display:flex;align-items:center;font-size:1rem;font-weight:900;letter-spacing:-.4px;color:var(--navy);line-height:1.2}
-.brand-logo{
-  display:block;
-  width:100px;
-  height:100px;
-  object-fit:contain;
+.brand-logo {
+  display: block;
+  width: 84px;
+  height: 84px;
+  object-fit: contain;
 }
 .nav-cta{background:var(--navy);color:white;padding:11px 16px;border-radius:4px}
 .hero{padding:86px 0 72px;overflow:hidden}
@@ -383,6 +383,47 @@ footer strong{color:var(--yellow)}
   }
 }
 
+
+.slide-arrow {
+  background: #172b46;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, .18);
+  transition: background .2s ease, transform .2s ease;
+}
+
+.slide-arrow:hover {
+  background: #c95f46;
+  transform: translateY(-50%) scale(1.06);
+}
+
+
+.sector-shortcuts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.sector-shortcuts button {
+  padding: 8px 12px;
+  border: 1px solid #d8d1c6;
+  border-radius: 20px;
+  background: #fffdf9;
+  color: #172b46;
+  font-size: .8rem;
+  cursor: pointer;
+  transition: background .2s ease, color .2s ease;
+}
+
+.sector-shortcuts button:hover,
+.sector-shortcuts button.active {
+  background: #172b46;
+  border-color: #172b46;
+  color: #fff;
+}
+
 </style>
 </head>
 <body>
@@ -536,6 +577,18 @@ footer strong{color:var(--yellow)}
       </div>
     </div>
 
+ 
+<div class="sector-shortcuts" aria-label="Accès direct aux secteurs">
+  <button type="button" data-slide="0">Boulangerie</button>
+  <button type="button" data-slide="1">Boutiques</button>
+  <button type="button" data-slide="2">Artisans</button>
+  <button type="button" data-slide="3">Beauté</button>
+  <button type="button" data-slide="4">Immobilier</button>
+  <button type="button" data-slide="5">Indépendants</button>
+  <button type="button" data-slide="6">Restaurants</button>
+  <button type="button" data-slide="7">Associations</button>
+</div>
+
   </div>
 </section>
 
@@ -645,6 +698,7 @@ footer strong{color:var(--yellow)}
 
   const slides = [...slider.querySelectorAll('.slide')];
   const dots = [...slider.querySelectorAll('.slide-dots button')];
+  const shortcuts = [...document.querySelectorAll('.sector-shortcuts button')];
   let current = 0;
   let timer;
 
@@ -682,7 +736,16 @@ footer strong{color:var(--yellow)}
       restartTimer();
     });
   });
+  shortcuts.forEach((button, i) => {
+  button.classList.toggle('active', i === current);
+});
 
+ shortcuts.forEach((button) => {
+  button.addEventListener('click', () => {
+    showSlide(Number(button.dataset.slide));
+    restartTimer();
+  });
+});
   showSlide(0);
   restartTimer();
 })();
