@@ -689,16 +689,18 @@ footer strong{color:var(--yellow)}
   </div>
 </footer>
 <script>
-  
-<script>
 (() => {
   const slider = document.getElementById('heroSlideshow');
-  if (!slider || slider.dataset.initialized) return;
-  slider.dataset.initialized = 'true';
+  if (!slider) return;
 
-  const slides = [...slider.querySelectorAll('.slide')];
-  const dots = [...slider.querySelectorAll('.slide-dots button')];
-  const shortcuts = [...document.querySelectorAll('.sector-shortcuts button')];
+  const slides = Array.from(slider.querySelectorAll('.slide'));
+  const dots = Array.from(slider.querySelectorAll('.slide-dots button'));
+  const shortcuts = Array.from(document.querySelectorAll('.sector-shortcuts button'));
+  const prev = slider.querySelector('.prev');
+  const next = slider.querySelector('.next');
+
+  if (!slides.length) return;
+
   let current = 0;
   let timer;
 
@@ -713,6 +715,13 @@ footer strong{color:var(--yellow)}
       dot.classList.toggle('active', i === current);
       dot.setAttribute('aria-current', i === current ? 'true' : 'false');
     });
+
+    shortcuts.forEach((button) => {
+      button.classList.toggle(
+        'active',
+        Number(button.dataset.slide) === current
+      );
+    });
   }
 
   function restartTimer() {
@@ -720,15 +729,19 @@ footer strong{color:var(--yellow)}
     timer = setInterval(() => showSlide(current + 1), 5000);
   }
 
-  slider.querySelector('.prev').addEventListener('click', () => {
-    showSlide(current - 1);
-    restartTimer();
-  });
+  if (prev) {
+    prev.addEventListener('click', () => {
+      showSlide(current - 1);
+      restartTimer();
+    });
+  }
 
-  slider.querySelector('.next').addEventListener('click', () => {
-    showSlide(current + 1);
-    restartTimer();
-  });
+  if (next) {
+    next.addEventListener('click', () => {
+      showSlide(current + 1);
+      restartTimer();
+    });
+  }
 
   dots.forEach((dot, i) => {
     dot.addEventListener('click', () => {
@@ -736,16 +749,14 @@ footer strong{color:var(--yellow)}
       restartTimer();
     });
   });
-  shortcuts.forEach((button, i) => {
-  button.classList.toggle('active', i === current);
-});
 
- shortcuts.forEach((button) => {
-  button.addEventListener('click', () => {
-    showSlide(Number(button.dataset.slide));
-    restartTimer();
+  shortcuts.forEach((button) => {
+    button.addEventListener('click', () => {
+      showSlide(Number(button.dataset.slide));
+      restartTimer();
+    });
   });
-});
+
   showSlide(0);
   restartTimer();
 })();
