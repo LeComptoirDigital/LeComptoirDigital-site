@@ -136,6 +136,178 @@ footer strong{color:var(--yellow)}
  .contact-grid{gap:25px}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+  
+/* Accueil : message et diaporama */
+.hero-content {
+  min-width: 0;
+}
+
+.hero-benefits {
+  display: grid;
+  gap: 16px;
+  margin: 26px 0;
+}
+
+.hero-benefit {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.benefit-icon {
+  display: grid;
+  place-items: center;
+  flex: 0 0 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #f2dfaa;
+  color: #172b46;
+  font-size: 20px;
+}
+
+.hero-benefit strong {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--navy);
+}
+
+.hero-benefit p {
+  margin: 0;
+  line-height: 1.5;
+  font-size: .94rem;
+}
+
+.hero-slideshow {
+  position: relative;
+  min-width: 0;
+  height: 500px;
+  overflow: hidden;
+  border-radius: 18px;
+  background: #e9e4da;
+  box-shadow: 0 18px 45px rgba(23, 43, 70, .14);
+}
+
+.hero-slideshow .slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .45s ease, visibility .45s ease;
+}
+
+.hero-slideshow .slide.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.hero-slideshow .slide img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.hero-slideshow .slide::after {
+  content: "";
+  position: absolute;
+  inset: 45% 0 0;
+  background: linear-gradient(transparent, rgba(14, 25, 39, .78));
+  pointer-events: none;
+}
+
+.slide-caption {
+  position: absolute;
+  z-index: 1;
+  left: 24px;
+  right: 24px;
+  bottom: 58px;
+  display: grid;
+  gap: 8px;
+  color: white;
+}
+
+.slide-caption span {
+  font-size: .75rem;
+  letter-spacing: .12em;
+}
+
+.slide-caption strong {
+  font-size: clamp(1.25rem, 2vw, 1.8rem);
+  line-height: 1.2;
+}
+
+.slide-arrow {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 42px;
+  height: 42px;
+  border: 0;
+  border-radius: 50%;
+  background: white;
+  color: #172b46;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.slide-arrow.prev {
+  left: 14px;
+}
+
+.slide-arrow.next {
+  right: 14px;
+}
+
+.slide-dots {
+  position: absolute;
+  z-index: 2;
+  bottom: 22px;
+  left: 24px;
+  display: flex;
+  gap: 8px;
+}
+
+.slide-dots button {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border: 0;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, .65);
+  cursor: pointer;
+}
+
+.slide-dots button.active {
+  width: 24px;
+  background: white;
+}
+
+@media (max-width: 800px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-slideshow {
+    height: 420px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-slideshow {
+    height: 350px;
+  }
+
+  .slide-caption {
+    left: 18px;
+    right: 18px;
+  }
+
+  .slide-dots {
+    left: 18px;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -155,28 +327,140 @@ footer strong{color:var(--yellow)}
 </header>
 
 <main>
+
 <section class="hero" id="accueil">
   <div class="wrap hero-grid">
-    <div>
+
+    <div class="hero-content">
       <div class="kicker">Créativité · stratégie · numérique</div>
-      <h1>Votre activité a une histoire.<br><em>Faisons-la remarquer.</em></h1>
-      <p class="lead">Des contenus personnalisés et des idées numériques pour aider les professionnels à présenter leur savoir-faire et à construire une présence en ligne qui leur ressemble.</p>
+
+      <h1>Votre marque mérite d’être remarquée.<br>
+        <em>Faisons-la sortir du lot.</em>
+      </h1>
+
+      <p class="lead">
+        Des créations visuelles personnalisées pour mettre en valeur
+        votre activité, votre savoir-faire et votre identité.
+      </p>
+
+      <div class="hero-benefits">
+        <div class="hero-benefit">
+          <span class="benefit-icon">✳</span>
+          <div>
+            <strong>Des créations à votre image</strong>
+            <p>Des visuels adaptés à votre activité et à vos clients.</p>
+          </div>
+        </div>
+
+        <div class="hero-benefit">
+          <span class="benefit-icon">↗</span>
+          <div>
+            <strong>Votre savoir-faire en lumière</strong>
+            <p>Des contenus qui attirent le regard et vous distinguent.</p>
+          </div>
+        </div>
+      </div>
+
       <div class="actions">
-        <a class="btn" href="#contact">Parlons de votre projet ↗</a>
-        <a class="btn secondary" href="#services">Explorer les services</a>
+        <a class="btn" href="#services">Découvrir nos services ↗</a>
+        <a class="btn secondary" href="#contact">Parlons de votre projet</a>
       </div>
-      <p class="note">Pour les commerces, restaurants, artisans, indépendants et entreprises de services.</p>
+
+      <p class="note">
+        Publications personnalisées · Stories · Création visuelle
+      </p>
     </div>
-    <div class="artboard" aria-label="Composition graphique illustrant la création de contenus">
-      <div class="art-label"><span>Studio créatif</span><span>01 / Votre univers</span></div>
-      <div class="poster">
-        <div class="mini">UNE IDÉE. UNE IDENTITÉ.</div>
-        <h2>Faites vivre<br>votre savoir-faire.</h2>
-        <div class="poster-shape"></div>
-        <div class="poster-foot"><span>VOTRE ACTIVITÉ</span><span>VOTRE HISTOIRE ↗</span></div>
+
+    <div class="hero-slideshow" id="heroSlideshow">
+      <div class="slide active">
+        <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1100&q=85"
+             alt="Boulangerie et métiers de bouche">
+        <div class="slide-caption">
+          <span>01 / 08</span>
+          <strong>Boulangeries & métiers de bouche</strong>
+        </div>
       </div>
-      <div class="float-card">CRÉÉ POUR VOUS ✦</div>
+
+      <div class="slide">
+        <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1100&q=85"
+             alt="Boutique et commerce">
+        <div class="slide-caption">
+          <span>02 / 08</span>
+          <strong>Boutiques & commerces</strong>
+        </div>
+      </div>
+
+      <div class="slide">
+        <img src="https://images.unsplash.com/photo-1452860606245-08befc0ff44b?auto=format&fit=crop&w=1100&q=85"
+             alt="Création et artisanat">
+        <div class="slide-caption">
+          <span>03 / 08</span>
+          <strong>Artisans & créateurs</strong>
+        </div>
+      </div>
+
+      <div class="slide">
+        <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1100&q=85"
+             alt="Beauté et bien-être">
+        <div class="slide-caption">
+          <span>04 / 08</span>
+          <strong>Beauté & bien-être</strong>
+        </div>
+      </div>
+
+      <div class="slide">
+        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1100&q=85"
+             alt="Immobilier et habitat">
+        <div class="slide-caption">
+          <span>05 / 08</span>
+          <strong>Immobilier & habitat</strong>
+        </div>
+      </div>
+
+      <div class="slide">
+        <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1100&q=85"
+             alt="Espace de travail professionnel">
+        <div class="slide-caption">
+          <span>06 / 08</span>
+          <strong>Indépendants & consultants</strong>
+        </div>
+      </div>
+
+      <div class="slide">
+        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1100&q=85"
+             alt="Restaurant et café">
+        <div class="slide-caption">
+          <span>07 / 08</span>
+          <strong>Restaurants & cafés</strong>
+        </div>
+      </div>
+
+      <div class="slide">
+        <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1100&q=85"
+             alt="Organisation d'un événement professionnel">
+        <div class="slide-caption">
+          <span>08 / 08</span>
+          <strong>Associations & événements</strong>
+        </div>
+      </div>
+
+      <button class="slide-arrow prev" type="button"
+              aria-label="Image précédente">&#8592;</button>
+      <button class="slide-arrow next" type="button"
+              aria-label="Image suivante">&#8594;</button>
+
+      <div class="slide-dots" aria-label="Choisir une image">
+        <button class="active" type="button" aria-label="Image 1"></button>
+        <button type="button" aria-label="Image 2"></button>
+        <button type="button" aria-label="Image 3"></button>
+        <button type="button" aria-label="Image 4"></button>
+        <button type="button" aria-label="Image 5"></button>
+        <button type="button" aria-label="Image 6"></button>
+        <button type="button" aria-label="Image 7"></button>
+        <button type="button" aria-label="Image 8"></button>
+      </div>
     </div>
+
   </div>
 </section>
 
@@ -276,6 +560,58 @@ footer strong{color:var(--yellow)}
     <span>© <span id="year"></span> · Tous droits réservés</span>
   </div>
 </footer>
+<script>
+  
+<script>
+(() => {
+  const slider = document.getElementById('heroSlideshow');
+  if (!slider || slider.dataset.initialized) return;
+  slider.dataset.initialized = 'true';
+
+  const slides = [...slider.querySelectorAll('.slide')];
+  const dots = [...slider.querySelectorAll('.slide-dots button')];
+  let current = 0;
+  let timer;
+
+  function showSlide(index) {
+    current = (index + slides.length) % slides.length;
+
+    slides.forEach((slide, i) => {
+      slide.classList.toggle('active', i === current);
+    });
+
+    dots.forEach((dot, i) => {
+      dot.classList.toggle('active', i === current);
+      dot.setAttribute('aria-current', i === current ? 'true' : 'false');
+    });
+  }
+
+  function restartTimer() {
+    clearInterval(timer);
+    timer = setInterval(() => showSlide(current + 1), 5000);
+  }
+
+  slider.querySelector('.prev').addEventListener('click', () => {
+    showSlide(current - 1);
+    restartTimer();
+  });
+
+  slider.querySelector('.next').addEventListener('click', () => {
+    showSlide(current + 1);
+    restartTimer();
+  });
+
+  dots.forEach((dot, i) => {
+    dot.addEventListener('click', () => {
+      showSlide(i);
+      restartTimer();
+    });
+  });
+
+  showSlide(0);
+  restartTimer();
+})();
+</script>
 <script>document.getElementById("year").textContent=new Date().getFullYear();</script>
 </body>
 </html>
