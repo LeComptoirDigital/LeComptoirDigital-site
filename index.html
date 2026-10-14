@@ -280,26 +280,25 @@ footer strong{color:var(--yellow)}
   position: relative;
   z-index: 1;
   min-width: 0;
-  padding: 28px 0 28px 8px;
+  padding: 28px 0;
 }
 
-/* Pinceaux décoratifs derrière la vidéo */
+/* Décor beige plus léger */
 .video-art::before {
   content: "";
   position: absolute;
   z-index: -1;
   top: 0;
-  right: -15px;
-  width: 78%;
-  height: 45%;
-  background:
-    repeating-linear-gradient(
-      168deg,
-      transparent 0 8px,
-      #e9c9aa 9px 11px,
-      transparent 12px 17px
-    );
-  opacity: .48;
+  right: -10px;
+  width: 75%;
+  height: 42%;
+  background: repeating-linear-gradient(
+    168deg,
+    transparent 0 8px,
+    #e9c9aa 9px 11px,
+    transparent 12px 17px
+  );
+  opacity: .22;
   transform: rotate(-5deg);
 }
 
@@ -307,29 +306,29 @@ footer strong{color:var(--yellow)}
   content: "";
   position: absolute;
   z-index: -1;
-  bottom: -12px;
-  left: -35px;
-  width: 75%;
-  height: 27%;
-  background:
-    repeating-linear-gradient(
-      165deg,
-      transparent 0 7px,
-      #e5c2a0 8px 10px,
-      transparent 11px 16px
-    );
-  opacity: .45;
+  bottom: -8px;
+  left: -25px;
+  width: 70%;
+  height: 24%;
+  background: repeating-linear-gradient(
+    165deg,
+    transparent 0 7px,
+    #e5c2a0 8px 10px,
+    transparent 11px 16px
+  );
+  opacity: .18;
   transform: rotate(-4deg);
 }
 
+/* Cadre resserré autour de la vidéo */
 .video-frame {
   position: relative;
   width: 100%;
   max-width: 490px;
   margin: 0 auto;
-  padding: 8px;
+  padding: 5px;
   box-sizing: border-box;
-  border-radius: 22px;
+  border-radius: 18px;
   background: #192f4c;
   box-shadow: 0 20px 45px rgba(25, 47, 76, .16);
 }
@@ -340,33 +339,36 @@ footer strong{color:var(--yellow)}
   height: auto;
   max-height: 76vh;
   object-fit: contain;
-  border-radius: 13px;
+  border-radius: 12px;
   background: #08090b;
 }
 
+/* Annotation manuscrite */
 .video-note {
   position: absolute;
   z-index: 3;
   top: 0;
-  right: -8px;
+  right: -5px;
   color: #192f4c;
   font-family: "Segoe Print", "Comic Sans MS", cursive;
   font-size: 15px;
   line-height: 1.5;
-  transform: rotate(5deg);
+  transform: rotate(4deg);
 }
 
+/* Flèche courbe simple, sans boucle */
 .video-arrow {
   position: absolute;
   z-index: 3;
-  top: 55px;
-  right: -8px;
-  width: 82px;
+  top: 52px;
+  right: -2px;
+  width: 65px;
+  height: 85px;
   color: #192f4c;
-  transform: rotate(5deg);
+  transform: none;
 }
 
-/* Adaptation aux petits écrans */
+/* Affichage sur tablette et mobile */
 @media (max-width: 850px) {
   .video-grid {
     grid-template-columns: 1fr;
@@ -392,7 +394,8 @@ footer strong{color:var(--yellow)}
   .video-arrow {
     top: 45px;
     right: 0;
-    width: 65px;
+    width: 55px;
+    height: 70px;
   }
 
   .video-frame video {
@@ -406,8 +409,8 @@ footer strong{color:var(--yellow)}
   }
 
   .video-frame {
-    padding: 5px;
-    border-radius: 15px;
+    padding: 4px;
+    border-radius: 14px;
   }
 
   .video-frame video {
@@ -424,7 +427,6 @@ footer strong{color:var(--yellow)}
     height: 46px;
   }
 }
-
 <style>
 :root{
   --paper:#f7f4ee;
