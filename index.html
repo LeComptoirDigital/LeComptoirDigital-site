@@ -203,6 +203,228 @@ footer strong{color:var(--yellow)}
 <meta name="theme-color" content="#f7f4ee">
 <meta name="description" content="Le Comptoir Digital Shop : création de contenus numériques et solutions créatives pour les professionnels.">
 <title>Le Comptoir Digital Shop — Créativité & présence en ligne</title>
+  
+/* Section vidéo : mise en page et décoration */
+.video-section {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 64px 0;
+  background: #fbf7f0;
+  border-top: 1px solid #e9dfd1;
+  border-bottom: 1px solid #e9dfd1;
+  color: #192f4c;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 42px;
+  align-items: center;
+}
+
+.video-copy {
+  position: relative;
+  z-index: 2;
+}
+
+.video-copy .section-title {
+  margin: 14px 0 20px;
+  line-height: 1.08;
+}
+
+.video-copy .section-desc {
+  margin-bottom: 28px;
+  line-height: 1.7;
+}
+
+.video-benefit {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 18px 0;
+}
+
+.benefit-icon {
+  display: flex;
+  flex: 0 0 54px;
+  width: 54px;
+  height: 54px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #f4e2d2;
+  color: #192f4c;
+  font-size: 27px;
+}
+
+.video-benefit strong {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.video-benefit p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.video-cta {
+  display: inline-block;
+  margin-top: 20px;
+  background: #c85f40;
+  color: #fff;
+  text-decoration: none;
+}
+
+.video-art {
+  position: relative;
+  z-index: 1;
+  min-width: 0;
+  padding: 28px 0 28px 8px;
+}
+
+/* Pinceaux décoratifs derrière la vidéo */
+.video-art::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: -15px;
+  width: 78%;
+  height: 45%;
+  background:
+    repeating-linear-gradient(
+      168deg,
+      transparent 0 8px,
+      #e9c9aa 9px 11px,
+      transparent 12px 17px
+    );
+  opacity: .48;
+  transform: rotate(-5deg);
+}
+
+.video-art::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  bottom: -12px;
+  left: -35px;
+  width: 75%;
+  height: 27%;
+  background:
+    repeating-linear-gradient(
+      165deg,
+      transparent 0 7px,
+      #e5c2a0 8px 10px,
+      transparent 11px 16px
+    );
+  opacity: .45;
+  transform: rotate(-4deg);
+}
+
+.video-frame {
+  position: relative;
+  width: 100%;
+  max-width: 490px;
+  margin: 0 auto;
+  padding: 8px;
+  box-sizing: border-box;
+  border-radius: 22px;
+  background: #192f4c;
+  box-shadow: 0 20px 45px rgba(25, 47, 76, .16);
+}
+
+.video-frame video {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 76vh;
+  object-fit: contain;
+  border-radius: 13px;
+  background: #08090b;
+}
+
+.video-note {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  right: -8px;
+  color: #192f4c;
+  font-family: "Segoe Print", "Comic Sans MS", cursive;
+  font-size: 15px;
+  line-height: 1.5;
+  transform: rotate(5deg);
+}
+
+.video-arrow {
+  position: absolute;
+  z-index: 3;
+  top: 55px;
+  right: -8px;
+  width: 82px;
+  color: #192f4c;
+  transform: rotate(5deg);
+}
+
+/* Adaptation aux petits écrans */
+@media (max-width: 850px) {
+  .video-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .video-copy {
+    max-width: 620px;
+  }
+
+  .video-art {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding-top: 55px;
+  }
+
+  .video-note {
+    top: 0;
+    right: 4px;
+  }
+
+  .video-arrow {
+    top: 45px;
+    right: 0;
+    width: 65px;
+  }
+
+  .video-frame video {
+    max-height: 70vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .video-section {
+    padding: 42px 0;
+  }
+
+  .video-frame {
+    padding: 5px;
+    border-radius: 15px;
+  }
+
+  .video-frame video {
+    border-radius: 10px;
+  }
+
+  .video-benefit {
+    gap: 12px;
+  }
+
+  .benefit-icon {
+    flex-basis: 46px;
+    width: 46px;
+    height: 46px;
+  }
+}
+
 <style>
 :root{
   --paper:#f7f4ee;
