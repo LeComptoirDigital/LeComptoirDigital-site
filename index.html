@@ -150,8 +150,8 @@ footer strong{color:var(--yellow)}
 
 /* SECTION VIDÉO — direction éditoriale distincte */
 .video-section{position:relative;isolation:isolate;overflow:hidden;padding:76px 0;background:#fbf7f0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.video-grid{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);gap:clamp(32px,5vw,72px);align-items:center}
-.video-copy{position:relative;z-index:2;max-width:620px;padding:10px 0}
+.video-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(28px,4vw,58px);align-items:stretch}
+.video-copy{position:relative;z-index:2;max-width:560px;padding:10px 0;align-self:center}
 .video-eyebrow{display:flex;align-items:center;gap:12px;color:var(--terracotta);font-size:.76rem;font-weight:900;letter-spacing:2px;text-transform:uppercase}
 .video-eyebrow span{display:grid;place-items:center;width:34px;height:34px;border:1px solid #d9a294;border-radius:50%;font-family:Georgia,serif;font-size:.85rem;letter-spacing:0;color:var(--navy)}
 .video-title{margin:18px 0 18px;font-family:Georgia,"Times New Roman",serif;font-size:clamp(2.65rem,4.1vw,4.05rem);font-weight:500;line-height:1.04;letter-spacing:-1.5px;color:var(--navy)}
@@ -164,12 +164,12 @@ footer strong{color:var(--yellow)}
 .video-benefit strong{display:block;margin:1px 0 4px;color:var(--navy);font-size:1rem}
 .video-benefit p{margin:0;color:#69717c;line-height:1.65;font-size:.93rem}
 .video-cta{margin-top:2px}
-.video-art{position:relative;z-index:1;min-width:0;padding:48px 0 24px}
+.video-art{position:relative;z-index:1;min-width:0;padding:24px 0;display:flex;align-items:center;justify-content:center}
 .foliage-shadow{position:absolute;z-index:0;inset:-2% -18% 2% -22%;width:140%;height:106%;overflow:visible;opacity:.34;filter:blur(7px);transform:rotate(-9deg);pointer-events:none}
 /* Ombre végétale diffuse, en formes de feuilles plutôt qu’en traits */
 
-.video-frame{position:relative;z-index:1;width:min(100%,430px);margin:0 auto;padding:3px;border-radius:14px;background:var(--navy);box-shadow:0 18px 38px #172b4620}
-.video-frame video{display:block;width:100%;height:auto;max-height:78vh;object-fit:contain;border-radius:11px;background:#101722}
+.video-frame{position:relative;z-index:1;width:min(100%,520px);margin:0 auto;padding:3px;border-radius:14px;background:var(--navy);box-shadow:0 18px 38px #172b4620}
+.video-frame video{display:block;width:100%;height:auto;max-height:88vh;object-fit:contain;border-radius:11px;background:#101722}
 .video-note{position:absolute;z-index:3;top:0;right:0;color:var(--navy);font-family:'Segoe Print','Comic Sans MS',cursive;font-size:14px;line-height:1.45;transform:rotate(4deg)}
 .video-arrow{position:absolute;z-index:3;top:12px;right:4px;width:72px;height:72px;color:var(--terracotta);overflow:visible;pointer-events:none}
 @media(max-width:850px){.video-section{padding:56px 0}.video-grid{grid-template-columns:1fr;gap:30px}.video-copy{max-width:680px}.video-art{width:100%;max-width:470px;margin:0 auto;padding-top:84px}.video-frame{max-width:410px}.video-frame video{max-height:68vh}.video-note{right:4px}.video-arrow{top:43px;right:8px;width:58px;height:58px}.foliage-shadow{inset:0 -12% 0 -12%;width:124%;height:100%}}
@@ -209,14 +209,14 @@ footer strong{color:var(--yellow)}
         <p class="note">Publications personnalisées · Stories · Création visuelle</p>
       </div>
       <div class="hero-slideshow" id="heroSlideshow" aria-label="Diaporama des secteurs professionnels">
-        <div class="slide active"><img src="assets/images/slide-01-boutique.jpg" alt="Vendeuse aidant une cliente à choisir un pantalon dans une boutique de vêtements" fetchpriority="high"><div class="slide-caption"><span>01 / 08</span><strong>Boutiques &amp; e-commerce</strong></div></div>
-        <div class="slide"><img src="assets/images/slide-02-artisans.jpg" alt="Artisan façonnant une pièce en céramique au tour" loading="lazy"><div class="slide-caption"><span>02 / 08</span><strong>Artisans &amp; créateurs</strong></div></div>
-        <div class="slide"><img src="assets/images/slide-03-beaute.jpg" alt="Personne recevant un soin esthétique du visage" loading="lazy"><div class="slide-caption"><span>03 / 08</span><strong>Beauté &amp; bien-être</strong></div></div>
-        <div class="slide"><img src="assets/images/slide-04-immobilier.jpg" alt="Bien immobilier présenté à la vente" loading="lazy"><div class="slide-caption"><span>04 / 08</span><strong>Immobilier &amp; habitat</strong></div></div>
-        <div class="slide"><img src="assets/images/slide-05-independants.jpg" alt="Professionnel prenant des notes à son bureau, avec ordinateur" loading="lazy"><div class="slide-caption"><span>05 / 08</span><strong>Indépendants &amp; consultants</strong></div></div>
-        <div class="slide"><img src="assets/images/slide-06-boulangerie.jpg" alt="Boulanger façonnant de la pâte près de son four" loading="lazy"><div class="slide-caption"><span>06 / 08</span><strong>Boulangerie &amp; métiers de bouche</strong></div></div>
-        <div class="slide"><img src="assets/images/slide-07-pizzaiolo.jpg" alt="Pizzaiolo garnissant une pizza dans une cuisine professionnelle" loading="lazy"><div class="slide-caption"><span>07 / 08</span><strong>Restaurants &amp; cafés</strong></div></div>
-        <div class="slide"><img src="assets/images/slide-08-fleuriste.jpg" alt="Fleuriste composant un bouquet dans sa boutique" loading="lazy"><div class="slide-caption"><span>08 / 08</span><strong>Fleuristes &amp; artisans floraux</strong></div></div>
+        <div class="slide active"><img src="https://images.pexels.com/photos/5418891/pexels-photo-5418891.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Vendeuse aidant une cliente à choisir un pantalon dans une boutique de vêtements" fetchpriority="high"><div class="slide-caption"><span>01 / 08</span><strong>Boutiques &amp; e-commerce</strong></div></div>
+        <div class="slide"><img src="https://images.unsplash.com/photo-1565193298595-6f7b7a9b3b31?auto=format&fit=crop&w=1200&q=85" alt="Artisan façonnant une pièce en céramique au tour" loading="lazy"><div class="slide-caption"><span>02 / 08</span><strong>Artisans &amp; créateurs</strong></div></div>
+        <div class="slide"><img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1200&q=85" alt="Personne recevant un soin esthétique du visage" loading="lazy"><div class="slide-caption"><span>03 / 08</span><strong>Beauté &amp; bien-être</strong></div></div>
+        <div class="slide"><img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=85" alt="Bien immobilier présenté à la vente" loading="lazy"><div class="slide-caption"><span>04 / 08</span><strong>Immobilier &amp; habitat</strong></div></div>
+        <div class="slide"><img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=85" alt="Professionnel prenant des notes à son bureau, avec ordinateur" loading="lazy"><div class="slide-caption"><span>05 / 08</span><strong>Indépendants &amp; consultants</strong></div></div>
+        <div class="slide"><img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1200&q=85" alt="Boulanger façonnant de la pâte près de son four" loading="lazy"><div class="slide-caption"><span>06 / 08</span><strong>Boulangerie &amp; métiers de bouche</strong></div></div>
+        <div class="slide"><img src="https://images.unsplash.com/photo-1579751626657-72bc17010498?auto=format&fit=crop&w=1200&q=85" alt="Pizzaiolo garnissant une pizza dans une cuisine professionnelle" loading="lazy"><div class="slide-caption"><span>07 / 08</span><strong>Restaurants &amp; cafés</strong></div></div>
+        <div class="slide"><img src="https://images.pexels.com/photos/5414034/pexels-photo-5414034.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Fleuriste composant un bouquet dans sa boutique" loading="lazy"><div class="slide-caption"><span>08 / 08</span><strong>Fleuristes &amp; artisans floraux</strong></div></div>
         <button class="slide-arrow prev" type="button" aria-label="Image précédente">‹</button><button class="slide-arrow next" type="button" aria-label="Image suivante">›</button>
         <div class="slide-dots" aria-label="Choisir une image"><button type="button" aria-label="Image 1" class="active"></button><button type="button" aria-label="Image 2"></button><button type="button" aria-label="Image 3"></button><button type="button" aria-label="Image 4"></button><button type="button" aria-label="Image 5"></button><button type="button" aria-label="Image 6"></button><button type="button" aria-label="Image 7"></button><button type="button" aria-label="Image 8"></button></div>
       </div>
@@ -230,11 +230,11 @@ footer strong{color:var(--yellow)}
     <div class="video-copy">
       <div class="video-eyebrow"><span>02</span> Notre univers en vidéo</div>
       <h2 class="video-title">Des idées qui<br>prennent <em>vie.</em></h2>
-      <p class="video-intro">Chaque activité mérite son propre langage visuel. Découvrez notre façon de transformer une idée en contenu vivant, soigné et adapté à votre univers.</p>
+      <p class="video-intro">Des contenus visuels pensés pour votre activité, votre identité et vos clients.</p>
       <div class="video-benefits">
-        <div class="video-benefit"><span class="video-icon" aria-hidden="true">✳</span><div><strong>Créations visuelles</strong><p>Des contenus singuliers, pensés pour votre identité.</p></div></div>
-        <div class="video-benefit"><span class="video-icon" aria-hidden="true">↗</span><div><strong>Stratégie sur mesure</strong><p>Des directions créatives différentes selon votre activité.</p></div></div>
-        <div class="video-benefit"><span class="video-icon" aria-hidden="true">◎</span><div><strong>Accompagnement complet</strong><p>Un accompagnement adapté à chaque étape du projet.</p></div></div>
+        <div class="video-benefit"><span class="video-icon" aria-hidden="true">✳</span><div><strong>Créations visuelles</strong><p>Des visuels à votre image.</p></div></div>
+        <div class="video-benefit"><span class="video-icon" aria-hidden="true">↗</span><div><strong>Stratégie sur mesure</strong><p>Une approche adaptée à votre métier.</p></div></div>
+        <div class="video-benefit"><span class="video-icon" aria-hidden="true">◎</span><div><strong>Accompagnement complet</strong><p>Un suivi clair, du brief à la livraison.</p></div></div>
       </div>
       <a class="btn video-cta" href="#contact">Parlons de votre projet ↗</a>
     </div>
