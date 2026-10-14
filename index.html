@@ -445,5 +445,21 @@ footer strong{color:var(--yellow)}
 })();
 </script>
 <script>document.getElementById("year").textContent=new Date().getFullYear();</script>
+<script>
+/* data-image-path-fallback: try the existing image filename at the site root and in assets/images. */
+document.addEventListener("error", function(event) {
+  const image = event.target;
+  if (!(image instanceof HTMLImageElement)) return;
+  const current = image.getAttribute("src") || "";
+  if (!current || /^(data:|https?:|\/\/)/i.test(current)) return;
+  const filename = current.split(/[?#]/)[0].split("/").pop();
+  if (!filename) return;
+  const candidates = [filename, "assets/images/" + filename];
+  const tried = Number(image.dataset.imagePathFallback || "0");
+  if (tried >= candidates.length) return;
+  image.dataset.imagePathFallback = String(tried + 1);
+  image.src = candidates[tried];
+}, true);
+</script>
 </body>
 </html>
