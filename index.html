@@ -210,7 +210,7 @@ footer strong{color:var(--yellow)}
 #services.services-gallery .website-screen{position:relative;width:calc(100% - 66px);height:145px;flex:0 0 auto;overflow:hidden;border:6px solid #294e48;border-bottom-width:11px;border-radius:5px;background:#fffdf9;outline:2px solid #9bbde0;box-shadow:0 0 0 4px #fbfdfb,0 11px 20px #172b4626}
 #services.services-gallery .screen-toolbar{position:absolute;z-index:2;left:0;right:0;top:0;height:12px;border-bottom:1px solid #d9dfd5;background:radial-gradient(circle at 8px 6px,#c95f46 1.6px,transparent 2px),radial-gradient(circle at 15px 6px,#f1c75b 1.6px,transparent 2px),radial-gradient(circle at 22px 6px,#9bbde0 1.6px,transparent 2px),#eef0e8}
 #services.services-gallery .site-photo{position:absolute;top:31px;right:8px;width:60%;height:64px;overflow:hidden;background:#f7fbf9}
-#services.services-gallery .site-photo img{display:block;width:100%;height:100%;object-fit:contain;background:#f7fbf9}
+#services.services-gallery .site-photo img{display:block;width:100%;height:100%;object-fit:cover;background:#f7fbf9}
 #services.services-gallery .site-lines{position:absolute;left:9px;right:calc(60% + 11px);top:28px;bottom:20px;background:linear-gradient(#54796f,#54796f) left 0 top 3px/82% 8px no-repeat,linear-gradient(#d9a294,#d9a294) left 0 top 22px/62% 4px no-repeat,linear-gradient(#cfdad3,#cfdad3) left 0 top 36px/94% 4px no-repeat,linear-gradient(#cfdad3,#cfdad3) left 0 top 48px/78% 4px no-repeat,linear-gradient(#9bbde0,#9bbde0) left 0 top 66px/88% 4px no-repeat,linear-gradient(#cfdad3,#cfdad3) left 0 top 78px/67% 4px no-repeat,linear-gradient(#cfdad3,#cfdad3) left 0 top 90px/82% 4px no-repeat}
 #services.services-gallery .site-lines:before{content:"";position:absolute;left:0;top:-12px;width:38%;height:5px;background:#f1c75b}
 #services.services-gallery .phone-screen{width:53px;height:132px;flex:0 0 53px;padding:5px 3px;border:3px solid #294e48;border-radius:9px;background:#fffdf9;outline:2px solid #d9a294;outline-offset:2px;box-shadow:0 7px 14px #172b4620}
@@ -246,11 +246,13 @@ footer strong{color:var(--yellow)}
 @media(max-width:760px){#services.services-gallery .gallery-wrap{width:min(95%,650px);padding:24px 18px}#services.services-gallery .gallery-top{grid-template-columns:1fr;gap:12px;padding:17px}#services.services-gallery .gallery-heading h2{font-size:31px}#services.services-gallery .gallery-intro{margin-top:2px;padding:10px 0 0;border-left:0;border-top:1px solid #c0d0c7}#services.services-gallery .gallery-service{grid-template-columns:1fr}#services.services-gallery .gallery-service:nth-child(2) .service-art,#services.services-gallery .gallery-service:nth-child(2) .gallery-copy{order:initial}#services.services-gallery .service-art{height:190px}#services.services-gallery .gallery-service:nth-child(2) .service-art{height:205px}#services.services-gallery .art-management{height:214px}#services.services-gallery .showcase{max-width:350px;margin:auto}}
 @media(max-width:420px){#services.services-gallery .gallery-heading h2{font-size:28px}#services.services-gallery .gallery-copy{padding:16px 12px}#services.services-gallery .campaign-gallery{gap:5px;padding:5px}}
 /* Proportions finales des écrans de la carte Site & réseaux sociaux */
-#services.services-gallery .website-screen{width:calc(100% - 90px);height:164px;transform:translateY(8px)}
- #services.services-gallery .site-photo{top:34px;width:68%;height:78px}
- #services.services-gallery .site-lines{right:calc(68% + 10px)}
- #services.services-gallery .phone-screen{width:72px;height:142px;flex:0 0 72px;transform:translateY(8px)}
- #services.services-gallery .phone-photo{height:76px}</style>
+#services.services-gallery .gallery-service:nth-child(2) .service-art{height:232px}
+#services.services-gallery .website-screen{width:calc(100% - 132px);height:190px;transform:translateY(12px)}
+#services.services-gallery .site-photo{top:34px;width:70%;height:128px}
+#services.services-gallery .site-lines{right:calc(70% + 10px)}
+#services.services-gallery .phone-screen{width:82px;height:156px;flex:0 0 82px;transform:translateY(12px)}
+#services.services-gallery .phone-photo{height:88px}
+@media(max-width:760px){#services.services-gallery .gallery-service:nth-child(2) .service-art{height:232px}}</style>
 </head>
 <body>
 <header>
