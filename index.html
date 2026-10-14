@@ -148,92 +148,58 @@ footer strong{color:var(--yellow)}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
 
 
-/* SECTION VIDÉO — texte à gauche, vidéo verticale à droite */
+/* SECTION VIDÉO — direction éditoriale distincte */
 .video-section {
-  position: relative;
-  isolation: isolate;
-  overflow: hidden;
-  padding: 68px 0;
-  background: #fbf7f0;
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
+  position:relative; isolation:isolate; overflow:hidden;
+  padding:86px 0; background:#fbf7f0;
+  border-top:1px solid var(--line); border-bottom:1px solid var(--line);
 }
-.video-grid {
-  display: grid;
-  grid-template-columns: 1.05fr .9fr;
-  gap: 46px;
-  align-items: center;
+.video-grid { display:grid; grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr); gap:clamp(34px,5vw,76px); align-items:center; }
+.video-copy { position:relative; z-index:2; min-width:0; max-width:640px; padding:10px 0 14px; }
+.video-copy .kicker { color:var(--terracotta); letter-spacing:2.4px; }
+.video-copy .section-title { font-family:Georgia,'Times New Roman',serif; font-size:clamp(2.7rem,4.5vw,4.6rem); font-weight:400; line-height:1.02; letter-spacing:-1.8px; margin:20px 0 24px; max-width:660px; }
+.video-copy .section-title em { color:var(--terracotta); font-weight:400; }
+.video-copy .section-desc { max-width:610px; margin:0 0 30px; font-size:1.08rem; line-height:1.85; color:#626b76; }
+.video-benefits { display:grid; gap:20px; margin:30px 0 32px; }
+.video-benefit { display:flex; align-items:flex-start; gap:16px; }
+.video-icon { display:grid; place-items:center; flex:0 0 48px; width:48px; height:48px; border-radius:50%; background:#f4e2d2; color:var(--navy); font-size:1.3rem; }
+.video-benefit > div { padding-top:1px; }
+.video-benefit strong { display:block; color:var(--navy); font-size:1.02rem; margin-bottom:3px; }
+.video-benefit p { margin:0; color:#596474; line-height:1.65; font-size:.98rem; }
+.video-cta { margin-top:3px; }
+.video-art { position:relative; z-index:1; min-width:0; padding:48px 0 26px; }
+/* Ombre botanique légère, sans motif de traits */
+.video-art::before { content:""; position:absolute; z-index:-1; pointer-events:none; width:290px; height:390px; top:5px; right:-12px; opacity:.20; transform:rotate(16deg); filter:blur(1px); background:
+  radial-gradient(ellipse 22px 70px at 25% 18%, #aab89e 0 65%, transparent 69%),
+  radial-gradient(ellipse 24px 78px at 42% 32%, #aab89e 0 65%, transparent 69%),
+  radial-gradient(ellipse 20px 66px at 58% 45%, #aab89e 0 65%, transparent 69%),
+  radial-gradient(ellipse 25px 76px at 38% 60%, #aab89e 0 65%, transparent 69%),
+  radial-gradient(ellipse 22px 70px at 65% 72%, #aab89e 0 65%, transparent 69%),
+  linear-gradient(112deg, transparent 47%, #aab89e 48% 49%, transparent 50%); }
+.video-art::after { content:""; position:absolute; z-index:-1; pointer-events:none; left:-28px; bottom:0; width:72%; height:22%; background:radial-gradient(ellipse at center, #e8c9a9 0, #e8c9a966 38%, transparent 72%); filter:blur(15px); opacity:.45; }
+.video-frame { position:relative; width:100%; max-width:430px; margin:0 auto; padding:3px; box-sizing:border-box; border-radius:17px; background:var(--navy); box-shadow:0 20px 45px rgba(23,43,70,.16); }
+.video-frame video { display:block; width:100%; height:auto; max-height:76vh; object-fit:contain; border-radius:14px; background:#101722; }
+.video-note { position:absolute; z-index:3; top:0; right:0; color:var(--navy); font-family:'Segoe Print','Comic Sans MS',cursive; font-size:15px; line-height:1.45; transform:rotate(3deg); }
+.video-arrow { position:absolute; z-index:3; top:43px; right:2px; width:54px; height:54px; color:var(--terracotta); overflow:visible; pointer-events:none; }
+@media(max-width:850px) {
+ .video-section { padding:58px 0; }
+ .video-grid { grid-template-columns:1fr; gap:28px; }
+ .video-copy { max-width:700px; }
+ .video-art { width:100%; max-width:470px; margin:0 auto; padding-top:60px; }
+ .video-frame { max-width:390px; }
+ .video-frame video { max-height:68vh; }
+ .video-note { right:4px; }
+ .video-arrow { top:45px; right:7px; width:48px; height:48px; }
 }
-.video-copy { position: relative; z-index: 2; max-width: 590px; }
-.video-copy .section-title { margin: 12px 0 18px; }
-.video-copy .section-desc { margin: 0 0 24px; max-width: 570px; }
-.video-benefits { display: grid; gap: 14px; margin: 26px 0 30px; }
-.video-benefit { display: flex; align-items: center; gap: 14px; }
-.video-icon {
-  display: grid; place-items: center; flex: 0 0 48px;
-  width: 48px; height: 48px; border-radius: 50%;
-  background: #f4e2d2; color: var(--navy); font-size: 1.35rem;
+@media(max-width:480px) {
+ .video-section { padding:44px 0; }
+ .video-copy .section-title { font-size:clamp(2.55rem,12vw,3.5rem); letter-spacing:-1.2px; }
+ .video-copy .section-desc { font-size:1rem; line-height:1.75; }
+ .video-benefits { gap:17px; }
+ .video-frame { padding:3px; border-radius:13px; }
+ .video-frame video { border-radius:10px; }
+ .video-icon { flex-basis:44px; width:44px; height:44px; }
 }
-.video-benefit p { margin: 0; line-height: 1.5; }
-.video-benefit strong { color: var(--navy); }
-.video-cta { margin-top: 4px; }
-.video-art {
-  position: relative; z-index: 1; min-width: 0;
-  padding: 44px 8px 28px 0;
-}
-.video-art::before, .video-art::after {
-  content: ""; position: absolute; z-index: -1; pointer-events: none;
-  background: repeating-linear-gradient(168deg,
-    transparent 0 9px, #e8c9a9 10px 13px, transparent 14px 20px);
-  border-radius: 45% 55% 40% 60%;
-}
-.video-art::before {
-  top: 10px; right: -10px; width: 82%; height: 36%;
-  opacity: .34; transform: rotate(-7deg);
-}
-.video-art::after {
-  bottom: 2px; left: -24px; width: 76%; height: 23%;
-  opacity: .25; transform: rotate(5deg);
-}
-.video-frame {
-  position: relative; width: 100%; max-width: 455px; margin: 0 auto;
-  padding: 5px; box-sizing: border-box; border-radius: 18px;
-  background: var(--navy);
-  box-shadow: 0 20px 45px rgba(23,43,70,.18);
-}
-.video-frame video {
-  display: block; width: 100%; height: auto; max-height: 76vh;
-  object-fit: contain; border-radius: 12px; background: #101722;
-}
-.video-note {
-  position: absolute; z-index: 3; top: 0; right: -4px;
-  color: var(--navy); font-family: "Segoe Print","Comic Sans MS",cursive;
-  font-size: 14px; line-height: 1.45; transform: rotate(4deg);
-}
-.video-arrow {
-  position: absolute; z-index: 3; top: 43px; right: 5px;
-  width: 58px; height: 58px; color: var(--terracotta);
-  overflow: visible; pointer-events: none;
-}
-@media (max-width: 850px) {
-  .video-section { padding: 48px 0; }
-  .video-grid { grid-template-columns: 1fr; gap: 28px; }
-  .video-copy { max-width: 650px; }
-  .video-art { width: 100%; max-width: 470px; margin: 0 auto; padding-top: 55px; }
-  .video-frame { max-width: 410px; }
-  .video-frame video { max-height: 68vh; }
-  .video-note { right: 4px; }
-  .video-arrow { top: 43px; right: 8px; width: 48px; height: 48px; }
-}
-@media (max-width: 480px) {
-  .video-section { padding: 42px 0; }
-  .video-grid { gap: 22px; }
-  .video-frame { padding: 4px; border-radius: 14px; }
-  .video-frame video { border-radius: 10px; }
-  .video-benefit { gap: 12px; }
-  .video-icon { flex-basis: 44px; width: 44px; height: 44px; }
-}
-
 </style>
 </head>
 <body>
@@ -268,14 +234,14 @@ footer strong{color:var(--yellow)}
         <p class="note">Publications personnalisées · Stories · Création visuelle</p>
       </div>
       <div class="hero-slideshow" id="heroSlideshow" aria-label="Diaporama des secteurs professionnels">
-        <div class="slide active"><img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=1200&q=85" alt="Pains artisanaux en boulangerie" fetchpriority="high"><div class="slide-caption"><span>01 / 08</span><strong>Boulangeries & métiers de bouche</strong></div></div>
-        <div class="slide"><img src="https://images.unsplash.com/photo-1521335629791-ce4aec67dd47?auto=format&fit=crop&w=1200&q=85" alt="Boutique et espace de vente" loading="lazy"><div class="slide-caption"><span>02 / 08</span><strong>Boutiques & commerces</strong></div></div>
-        <div class="slide"><img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=1200&q=85" alt="Espace de création et artisanat" loading="lazy"><div class="slide-caption"><span>03 / 08</span><strong>Artisans & créateurs</strong></div></div>
-        <div class="slide"><img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&w=1200&q=85" alt="Univers beauté et bien-être" loading="lazy"><div class="slide-caption"><span>04 / 08</span><strong>Beauté & bien-être</strong></div></div>
+        <div class="slide active"><img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1200&q=85" alt="Pains artisanaux en boulangerie" fetchpriority="high"><div class="slide-caption"><span>01 / 08</span><strong>Boulangeries & métiers de bouche</strong></div></div>
+        <div class="slide"><img src="https://images.unsplash.com/photo-1556740758-90de374c12ad?auto=format&fit=crop&w=1200&q=85" alt="Boutique et espace de vente" loading="lazy"><div class="slide-caption"><span>02 / 08</span><strong>Boutiques & commerces</strong></div></div>
+        <div class="slide"><img src="https://images.unsplash.com/photo-1452860606245-08befc0ff44b?auto=format&fit=crop&w=1200&q=85" alt="Espace de création et artisanat" loading="lazy"><div class="slide-caption"><span>03 / 08</span><strong>Artisans & créateurs</strong></div></div>
+        <div class="slide"><img src="https://images.unsplash.com/photo-1560750588-73207b1ef5b8?auto=format&fit=crop&w=1200&q=85" alt="Univers beauté et bien-être" loading="lazy"><div class="slide-caption"><span>04 / 08</span><strong>Beauté & bien-être</strong></div></div>
         <div class="slide"><img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=85" alt="Maison et habitat" loading="lazy"><div class="slide-caption"><span>05 / 08</span><strong>Immobilier & habitat</strong></div></div>
-        <div class="slide"><img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=85" alt="Espace de travail professionnel" loading="lazy"><div class="slide-caption"><span>06 / 08</span><strong>Indépendants & consultants</strong></div></div>
-        <div class="slide"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1200&q=85" alt="Salle de restaurant accueillante" loading="lazy"><div class="slide-caption"><span>07 / 08</span><strong>Restaurants & cafés</strong></div></div>
-        <div class="slide"><img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=1200&q=85" alt="Groupe réuni pour un événement" loading="lazy"><div class="slide-caption"><span>08 / 08</span><strong>Associations & événements</strong></div></div>
+        <div class="slide"><img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1200&q=85" alt="Espace de travail professionnel" loading="lazy"><div class="slide-caption"><span>06 / 08</span><strong>Indépendants & consultants</strong></div></div>
+        <div class="slide"><img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1200&q=85" alt="Salle de restaurant accueillante" loading="lazy"><div class="slide-caption"><span>07 / 08</span><strong>Restaurants & cafés</strong></div></div>
+        <div class="slide"><img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1200&q=85" alt="Groupe réuni pour un événement" loading="lazy"><div class="slide-caption"><span>08 / 08</span><strong>Associations & événements</strong></div></div>
         <button class="slide-arrow prev" type="button" aria-label="Image précédente">‹</button><button class="slide-arrow next" type="button" aria-label="Image suivante">›</button>
         <div class="slide-dots" aria-label="Choisir une image"><button type="button" aria-label="Image 1" class="active"></button><button type="button" aria-label="Image 2" class=""></button><button type="button" aria-label="Image 3" class=""></button><button type="button" aria-label="Image 4" class=""></button><button type="button" aria-label="Image 5" class=""></button><button type="button" aria-label="Image 6" class=""></button><button type="button" aria-label="Image 7" class=""></button><button type="button" aria-label="Image 8" class=""></button></div>
       </div>
@@ -290,7 +256,7 @@ footer strong{color:var(--yellow)}
     <div class="video-copy">
       <div class="kicker">Notre univers en vidéo</div>
 
-      <h2 class="section-title">Des idées qui prennent vie.</h2>
+      <h2 class="section-title">Des idées qui prennent <em>vie.</em></h2>
 
       <p class="section-desc">
         Découvrez notre approche créative et les possibilités de contenus
