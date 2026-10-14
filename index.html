@@ -149,30 +149,31 @@ footer strong{color:var(--yellow)}
 
 
 /* SECTION VIDÉO — direction éditoriale distincte */
-.video-section{position:relative;isolation:isolate;overflow:hidden;padding:86px 0;background:#fbf7f0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.video-section{position:relative;isolation:isolate;overflow:hidden;padding:76px 0;background:#fbf7f0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .video-grid{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);gap:clamp(32px,5vw,72px);align-items:center}
 .video-copy{position:relative;z-index:2;max-width:620px;padding:10px 0}
 .video-eyebrow{display:flex;align-items:center;gap:12px;color:var(--terracotta);font-size:.76rem;font-weight:900;letter-spacing:2px;text-transform:uppercase}
 .video-eyebrow span{display:grid;place-items:center;width:34px;height:34px;border:1px solid #d9a294;border-radius:50%;font-family:Georgia,serif;font-size:.85rem;letter-spacing:0;color:var(--navy)}
-.video-title{margin:22px 0 22px;font-family:Georgia,'Times New Roman',serif;font-size:clamp(3rem,5vw,5rem);font-weight:500;line-height:.98;letter-spacing:-2px;color:var(--navy)}
+.video-title{margin:18px 0 18px;font-family:Georgia,"Times New Roman",serif;font-size:clamp(2.65rem,4.1vw,4.05rem);font-weight:500;line-height:1.04;letter-spacing:-1.5px;color:var(--navy)}
 .video-title em{color:var(--terracotta);font-weight:400}
-.video-intro{max-width:510px;margin:0 0 28px;color:#626b77;font-size:1.04rem;line-height:1.85}
-.video-benefits{display:grid;gap:20px;margin:28px 0 32px}
-.video-benefit{display:flex;align-items:flex-start;gap:15px;padding-bottom:17px;border-bottom:1px solid #e5ddd1}
+.video-intro{max-width:510px;margin:0 0 22px;color:#626b77;font-size:1rem;line-height:1.75}
+.video-benefits{display:grid;gap:15px;margin:22px 0 24px}
+.video-benefit{display:flex;align-items:flex-start;gap:14px;padding-bottom:13px;border-bottom:1px solid #e5ddd1}
 .video-benefit:last-child{border-bottom:0;padding-bottom:0}
 .video-icon{display:grid;place-items:center;flex:0 0 44px;width:44px;height:44px;border-radius:14px 14px 14px 4px;background:#f0dfc9;color:var(--navy);font-size:1.25rem}
 .video-benefit strong{display:block;margin:1px 0 4px;color:var(--navy);font-size:1rem}
 .video-benefit p{margin:0;color:#69717c;line-height:1.65;font-size:.93rem}
 .video-cta{margin-top:2px}
 .video-art{position:relative;z-index:1;min-width:0;padding:48px 0 24px}
+.foliage-shadow{position:absolute;z-index:0;inset:-2% -18% 2% -22%;width:140%;height:106%;overflow:visible;opacity:.34;filter:blur(7px);transform:rotate(-9deg);pointer-events:none}
 /* Ombre végétale diffuse, en formes de feuilles plutôt qu’en traits */
-.video-art:before{content:"";position:absolute;z-index:-1;inset:4% -12% 4% -20%;pointer-events:none;opacity:.5;background:radial-gradient(ellipse at 18% 22%,#b8c8b080 0 5%,transparent 17%),radial-gradient(ellipse at 28% 35%,#b8c8b066 0 4%,transparent 16%),radial-gradient(ellipse at 12% 48%,#d9c5a780 0 5%,transparent 18%),radial-gradient(ellipse at 80% 18%,#d9c5a766 0 4%,transparent 15%),radial-gradient(ellipse at 75% 35%,#b8c8b066 0 5%,transparent 17%),radial-gradient(ellipse at 85% 52%,#d9c5a755 0 4%,transparent 15%);filter:blur(7px);transform:rotate(-12deg)}
-.video-frame{position:relative;width:min(100%,430px);margin:0 auto;padding:3px;border-radius:15px;background:var(--navy);box-shadow:0 22px 48px #172b4626}
-.video-frame video{display:block;width:100%;height:auto;max-height:78vh;object-fit:contain;border-radius:12px;background:#101722}
+
+.video-frame{position:relative;z-index:1;width:min(100%,430px);margin:0 auto;padding:3px;border-radius:14px;background:var(--navy);box-shadow:0 18px 38px #172b4620}
+.video-frame video{display:block;width:100%;height:auto;max-height:78vh;object-fit:contain;border-radius:11px;background:#101722}
 .video-note{position:absolute;z-index:3;top:0;right:0;color:var(--navy);font-family:'Segoe Print','Comic Sans MS',cursive;font-size:14px;line-height:1.45;transform:rotate(4deg)}
-.video-arrow{position:absolute;z-index:3;top:34px;right:2px;width:72px;height:72px;color:var(--terracotta);overflow:visible;pointer-events:none}
-@media(max-width:850px){.video-section{padding:58px 0}.video-grid{grid-template-columns:1fr;gap:34px}.video-copy{max-width:680px}.video-art{width:100%;max-width:470px;margin:0 auto;padding-top:58px}.video-frame{max-width:410px}.video-frame video{max-height:68vh}.video-note{right:4px}.video-arrow{top:43px;right:8px;width:58px;height:58px}}
-@media(max-width:480px){.video-section{padding:44px 0}.video-title{font-size:clamp(2.8rem,13vw,4rem)}.video-intro{font-size:.98rem}.video-frame{padding:3px;border-radius:12px}.video-frame video{border-radius:9px}.video-benefit{gap:12px}.video-icon{flex-basis:40px;width:40px;height:40px}}
+.video-arrow{position:absolute;z-index:3;top:12px;right:4px;width:72px;height:72px;color:var(--terracotta);overflow:visible;pointer-events:none}
+@media(max-width:850px){.video-section{padding:56px 0}.video-grid{grid-template-columns:1fr;gap:30px}.video-copy{max-width:680px}.video-art{width:100%;max-width:470px;margin:0 auto;padding-top:84px}.video-frame{max-width:410px}.video-frame video{max-height:68vh}.video-note{right:4px}.video-arrow{top:43px;right:8px;width:58px;height:58px}.foliage-shadow{inset:0 -12% 0 -12%;width:124%;height:100%}}
+@media(max-width:480px){.video-section{padding:44px 0}.video-title{font-size:clamp(2.35rem,10vw,3.15rem);letter-spacing:-1px}.video-intro{font-size:.96rem}.video-frame{padding:3px;border-radius:12px}.video-frame video{border-radius:9px}.video-benefit{gap:12px}.video-icon{flex-basis:40px;width:40px;height:40px}.video-art{padding-top:82px}.video-note{font-size:13px}.video-arrow{top:40px;right:5px;width:56px;height:56px}}
 
 </style>
 </head>
@@ -208,14 +209,14 @@ footer strong{color:var(--yellow)}
         <p class="note">Publications personnalisées · Stories · Création visuelle</p>
       </div>
       <div class="hero-slideshow" id="heroSlideshow" aria-label="Diaporama des secteurs professionnels">
-        <div class="slide active"><img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=85" alt="Commerçante préparant une commande dans sa boutique" fetchpriority="high"><div class="slide-caption"><span>01 / 08</span><strong>Boutiques &amp; e-commerce</strong></div></div>
-        <div class="slide"><img src="https://images.unsplash.com/photo-1452860606245-08befc0ff44b?auto=format&fit=crop&w=1200&q=85" alt="Artisan travaillant à son établi" loading="lazy"><div class="slide-caption"><span>02 / 08</span><strong>Artisans &amp; créateurs</strong></div></div>
-        <div class="slide"><img src="https://images.unsplash.com/photo-1600948836101-f9ffda59d250?auto=format&fit=crop&w=1200&q=85" alt="Professionnelle de la beauté travaillant dans son salon" loading="lazy"><div class="slide-caption"><span>03 / 08</span><strong>Beauté &amp; bien-être</strong></div></div>
-        <div class="slide"><img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=85" alt="Bien immobilier présenté à la vente" loading="lazy"><div class="slide-caption"><span>04 / 08</span><strong>Immobilier &amp; habitat</strong></div></div>
-        <div class="slide"><img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=85" alt="Consultante travaillant sur des documents dans un bureau" loading="lazy"><div class="slide-caption"><span>05 / 08</span><strong>Indépendants &amp; consultants</strong></div></div>
-        <div class="slide"><img src="https://images.unsplash.com/photo-1586444248902-2f64eddc13df?auto=format&fit=crop&w=1200&q=85" alt="Boulanger travaillant la pâte dans son atelier" loading="lazy"><div class="slide-caption"><span>06 / 08</span><strong>Boulangerie &amp; métiers de bouche</strong></div></div>
-        <div class="slide"><img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=1200&q=85" alt="Chef cuisinier préparant un plat en cuisine" loading="lazy"><div class="slide-caption"><span>07 / 08</span><strong>Restaurants &amp; cafés</strong></div></div>
-        <div class="slide"><img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=1200&q=85" alt="Fleuriste composant un bouquet à son établi" loading="lazy"><div class="slide-caption"><span>08 / 08</span><strong>Fleuristes &amp; artisans floraux</strong></div></div>
+        <div class="slide active"><img src="assets/images/slide-01-boutique.jpg" alt="Vendeuse aidant une cliente à choisir un pantalon dans une boutique de vêtements" fetchpriority="high"><div class="slide-caption"><span>01 / 08</span><strong>Boutiques &amp; e-commerce</strong></div></div>
+        <div class="slide"><img src="assets/images/slide-02-artisans.jpg" alt="Artisan façonnant une pièce en céramique au tour" loading="lazy"><div class="slide-caption"><span>02 / 08</span><strong>Artisans &amp; créateurs</strong></div></div>
+        <div class="slide"><img src="assets/images/slide-03-beaute.jpg" alt="Personne recevant un soin esthétique du visage" loading="lazy"><div class="slide-caption"><span>03 / 08</span><strong>Beauté &amp; bien-être</strong></div></div>
+        <div class="slide"><img src="assets/images/slide-04-immobilier.jpg" alt="Bien immobilier présenté à la vente" loading="lazy"><div class="slide-caption"><span>04 / 08</span><strong>Immobilier &amp; habitat</strong></div></div>
+        <div class="slide"><img src="assets/images/slide-05-independants.jpg" alt="Professionnel prenant des notes à son bureau, avec ordinateur" loading="lazy"><div class="slide-caption"><span>05 / 08</span><strong>Indépendants &amp; consultants</strong></div></div>
+        <div class="slide"><img src="assets/images/slide-06-boulangerie.jpg" alt="Boulanger façonnant de la pâte près de son four" loading="lazy"><div class="slide-caption"><span>06 / 08</span><strong>Boulangerie &amp; métiers de bouche</strong></div></div>
+        <div class="slide"><img src="assets/images/slide-07-pizzaiolo.jpg" alt="Pizzaiolo garnissant une pizza dans une cuisine professionnelle" loading="lazy"><div class="slide-caption"><span>07 / 08</span><strong>Restaurants &amp; cafés</strong></div></div>
+        <div class="slide"><img src="assets/images/slide-08-fleuriste.jpg" alt="Fleuriste composant un bouquet dans sa boutique" loading="lazy"><div class="slide-caption"><span>08 / 08</span><strong>Fleuristes &amp; artisans floraux</strong></div></div>
         <button class="slide-arrow prev" type="button" aria-label="Image précédente">‹</button><button class="slide-arrow next" type="button" aria-label="Image suivante">›</button>
         <div class="slide-dots" aria-label="Choisir une image"><button type="button" aria-label="Image 1" class="active"></button><button type="button" aria-label="Image 2"></button><button type="button" aria-label="Image 3"></button><button type="button" aria-label="Image 4"></button><button type="button" aria-label="Image 5"></button><button type="button" aria-label="Image 6"></button><button type="button" aria-label="Image 7"></button><button type="button" aria-label="Image 8"></button></div>
       </div>
@@ -232,14 +233,14 @@ footer strong{color:var(--yellow)}
       <p class="video-intro">Chaque activité mérite son propre langage visuel. Découvrez notre façon de transformer une idée en contenu vivant, soigné et adapté à votre univers.</p>
       <div class="video-benefits">
         <div class="video-benefit"><span class="video-icon" aria-hidden="true">✳</span><div><strong>Créations visuelles</strong><p>Des contenus singuliers, pensés pour votre identité.</p></div></div>
-        <div class="video-benefit"><span class="video-icon" aria-hidden="true">↗</span><div><strong>Styles qui s’adaptent</strong><p>Des directions créatives différentes selon votre activité.</p></div></div>
-        <div class="video-benefit"><span class="video-icon" aria-hidden="true">◎</span><div><strong>De l’idée à la diffusion</strong><p>Un accompagnement adapté à chaque étape du projet.</p></div></div>
+        <div class="video-benefit"><span class="video-icon" aria-hidden="true">↗</span><div><strong>Stratégie sur mesure</strong><p>Des directions créatives différentes selon votre activité.</p></div></div>
+        <div class="video-benefit"><span class="video-icon" aria-hidden="true">◎</span><div><strong>Accompagnement complet</strong><p>Un accompagnement adapté à chaque étape du projet.</p></div></div>
       </div>
       <a class="btn video-cta" href="#contact">Parlons de votre projet ↗</a>
     </div>
     <div class="video-art">
       <span class="video-note">Découvrez les coulisses<br>de notre travail !</span>
-      <svg class="video-arrow" viewBox="0 0 100 100" aria-hidden="true"><path d="M82 8 C66 2 48 8 48 22 C48 35 65 39 69 27 C74 14 55 11 39 25 C25 37 25 53 13 65" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 51 L13 65 L28 61" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <svg class="foliage-shadow" viewBox="0 0 500 650" aria-hidden="true" focusable="false"><g fill="none" stroke="#9caa91" stroke-linecap="round" stroke-width="8"><path d="M35 590 C120 455 145 345 180 220 C205 130 270 65 370 28"/><path d="M110 480 C70 430 48 385 35 330 M145 385 C208 370 248 340 287 290 M170 290 C118 255 88 215 72 168 M218 205 C278 205 325 185 366 150 M255 130 C235 82 228 52 236 20"/></g><g fill="#b9c4ac"><path d="M42 337 C9 310 5 275 13 246 C46 262 69 287 72 321 C64 337 53 342 42 337Z"/><path d="M47 329 C58 295 48 270 22 252" fill="none" stroke="#9caa91" stroke-width="4"/><path d="M83 176 C48 157 39 124 45 92 C79 109 99 137 101 164 C95 176 89 180 83 176Z"/><path d="M92 167 C92 138 75 112 51 98" fill="none" stroke="#9caa91" stroke-width="4"/><path d="M280 294 C296 256 329 242 363 245 C348 280 321 301 293 305 C283 302 279 298 280 294Z"/><path d="M292 297 C316 276 340 263 359 250" fill="none" stroke="#9caa91" stroke-width="4"/><path d="M350 158 C362 123 392 106 426 106 C414 140 390 161 363 169 C353 166 349 162 350 158Z"/><path d="M361 161 C383 142 404 125 422 111" fill="none" stroke="#9caa91" stroke-width="4"/><path d="M236 34 C204 11 199 -20 209 -49 C240 -29 256 -1 255 25 C248 36 242 39 236 34Z" transform="translate(0 55)"/><path d="M240 80 C236 54 225 32 211 12" fill="none" stroke="#9caa91" stroke-width="4"/></g></svg><svg class="video-arrow" viewBox="0 0 100 100" aria-hidden="true"><path d="M82 8 C66 2 48 8 48 22 C48 35 65 39 69 27 C74 14 55 11 39 25 C25 37 25 53 13 65" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 51 L13 65 L28 61" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
       <div class="video-frame"><video controls playsinline preload="metadata"><source src="R001_Presentation_Services_VO_FINAL_PUBLICATION.mp4" type="video/mp4">Votre navigateur ne peut pas lire cette vidéo.</video></div>
     </div>
   </div>
