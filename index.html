@@ -164,65 +164,16 @@ footer strong{color:var(--yellow)}
 .video-benefit strong{display:block;margin:1px 0 4px;color:var(--navy);font-size:1rem}
 .video-benefit p{margin:0;color:#69717c;line-height:1.65;font-size:.93rem}
 .video-cta{margin-top:2px}
-.video-art{position:relative;z-index:1;min-width:0;padding:36px 0 0;display:flex;align-items:stretch}.video-art:before{content:"〰";position:absolute;z-index:4;left:-18px;top:2px;color:#54796f;font-size:42px;letter-spacing:3px;transform:rotate(-18deg);pointer-events:none}
-.foliage-shadow{position:absolute;z-index:2;inset:auto -13% -7% auto;width:65%;height:48%;overflow:visible;opacity:.42;filter:blur(7px);transform:rotate(-9deg);pointer-events:none}
-/* Ombre végétale diffuse, en formes de feuilles plutôt qu’en traits */
-
-.video-frame{position:relative;z-index:1;width:min(100%,430px);min-height:100%;margin:0 auto;padding:3px;border-radius:14px;background:var(--navy);box-shadow:0 18px 38px #172b4620}
+.video-art{position:relative;isolation:isolate;min-width:0;padding:86px 0 18px;display:flex;align-items:stretch;overflow:visible}
+/* Décors placés derrière le cadre opaque : seules leurs extrémités restent visibles autour. */
+.video-art:before{content:"";position:absolute;z-index:0;left:-16%;top:5px;width:45%;height:185px;opacity:.38;pointer-events:none;background-repeat:no-repeat;background-size:100% 100%;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 180'%3E%3Cg fill='none' stroke='%2354796f' stroke-linecap='round'%3E%3Cpath stroke-width='13' d='M-12 142 C45 118 75 86 119 70 S208 35 310 18'/%3E%3Cpath stroke-width='5' d='M-9 162 C52 135 91 103 132 87 S222 52 305 40'/%3E%3Cpath stroke-width='3' d='M-10 119 C42 98 72 68 109 54 S202 21 299 4'/%3E%3C/g%3E%3C/svg%3E")}
+.foliage-shadow{position:absolute;z-index:0;right:-16%;bottom:-8%;width:70%;height:68%;overflow:visible;opacity:.42;filter:blur(2px);transform:rotate(-9deg);pointer-events:none}
+.video-frame{position:relative;z-index:2;width:min(100%,430px);min-height:100%;margin:0 auto;padding:3px;border-radius:14px;background:var(--navy);box-shadow:0 18px 38px #172b4620}
 .video-frame video{display:block;width:100%;height:100%;min-height:580px;max-height:82vh;object-fit:cover;border-radius:11px;background:#101722}
-.video-note{position:absolute;z-index:3;top:0;right:0;color:var(--navy);font-family:'Segoe Print','Comic Sans MS',cursive;font-size:14px;line-height:1.45;transform:rotate(4deg)}
-.video-arrow{position:absolute;z-index:4;top:12px;right:4px;width:72px;height:72px;color:var(--terracotta);overflow:visible;pointer-events:none}
-@media(max-width:850px){.video-art:before{left:0;top:28px}.video-section{padding:56px 0}.video-grid{grid-template-columns:1fr;gap:30px}.video-copy{max-width:680px}.video-art{width:100%;max-width:470px;margin:0 auto;padding-top:84px}.video-frame{max-width:410px}.video-frame video{height:auto;min-height:0;max-height:68vh;object-fit:contain}.video-note{right:4px}.video-arrow{top:43px;right:8px;width:58px;height:58px}.foliage-shadow{inset:0 -12% 0 -12%;width:124%;height:100%}}
-@media(max-width:480px){.video-section{padding:44px 0}.video-title{font-size:clamp(2.35rem,10vw,3.15rem);letter-spacing:-1px}.video-intro{font-size:.96rem}.video-frame{padding:3px;border-radius:12px}.video-frame video{border-radius:9px}.video-benefit{gap:12px}.video-icon{flex-basis:40px;width:40px;height:40px}.video-art{padding-top:82px}.video-note{font-size:13px}.video-arrow{top:40px;right:5px;width:56px;height:56px}}
-
-
-/* Ajustements finaux demandés : plus expressif, plein écran et décor visible */
-.video-section{
-  width:100%;
-  min-height:calc(100svh - 78px);
-  padding:clamp(42px,5vw,76px) 0;
-  background:radial-gradient(ellipse at 12% 18%, #dcebe4 0, transparent 32%), radial-gradient(ellipse at 88% 85%, #f5dfd4 0, transparent 28%), #eef2ef;
-  overflow:hidden;
-}
-.video-section:after{
-  content:"";position:absolute;z-index:0;left:-95px;top:17%;width:230px;height:230px;border:1px solid #b8c8b0;border-radius:50%;box-shadow:0 0 0 22px #b8c8b01c,0 0 0 48px #b8c8b012;pointer-events:none;
-}
-.video-grid{position:relative;z-index:1;width:min(1500px,94%);grid-template-columns:minmax(0,1fr) minmax(0,.94fr);gap:clamp(34px,5vw,90px);align-items:stretch;min-height:calc(100svh - 190px)}
-.video-copy{max-width:720px;padding:clamp(10px,2vh,24px) 0;}
-.video-eyebrow{color:#3e7469;letter-spacing:2.4px}
-.video-eyebrow span{background:#fffaf4;border-color:#d89b84}
-.video-title{font-size:clamp(3rem,5vw,5.1rem);line-height:1.01;margin:22px 0;color:#172b46}
-.video-title em{color:#3e7469}
-.video-intro{font-size:clamp(1rem,1.2vw,1.12rem);line-height:1.8;max-width:560px}
-.video-benefits{gap:17px;margin:24px 0 28px}
-.video-benefit{border-bottom-color:#cbd9d2;padding-bottom:15px}
-.video-icon{background:linear-gradient(135deg,#dcebe4,#f3dfd3);color:#234d48;box-shadow:0 5px 16px #172b4610}
-.video-art{padding:108px 0 0;min-height:100%;align-items:stretch;}
-.video-art:before{content:"✳ 〰";left:-24px;top:36px;color:#3e7469;font-size:30px;letter-spacing:7px;transform:rotate(-16deg);z-index:5}
-.video-frame{width:min(100%,540px);height:100%;min-height:0;margin:0 auto 0;z-index:2;box-shadow:0 24px 55px #172b4630,0 0 0 8px #ffffff80;}
-.video-frame video{width:100%;height:100%;min-height:calc(100svh - 290px);max-height:none;object-fit:cover;}
-.video-note{top:7px;right:0;max-width:220px;text-align:right;color:#243b59;font-size:15px;line-height:1.5;z-index:5}
-.video-arrow{top:42px;right:5px;width:62px;height:62px;z-index:5}
-.foliage-shadow{z-index:3;inset:auto -10% -13% auto;width:58%;height:53%;opacity:.72;filter:blur(1.3px);transform:rotate(-8deg);}
-@media(max-width:850px){
- .video-section{min-height:0;padding:56px 0}
- .video-grid{width:min(94%,680px);grid-template-columns:1fr;gap:26px;min-height:0}
- .video-copy{max-width:none}
- .video-art{width:100%;max-width:600px;margin:0 auto;padding-top:105px;min-height:0}
- .video-frame{width:min(100%,470px);height:auto;min-height:0}
- .video-frame video{height:auto;min-height:0;max-height:75vh;object-fit:contain}
- .video-note{top:7px;right:0}
- .video-arrow{top:42px;right:8px}
- .foliage-shadow{inset:auto -9% -8% auto;width:65%;height:48%;}
-}
-@media(max-width:480px){
- .video-grid{width:90%}
- .video-title{font-size:clamp(2.6rem,12vw,3.5rem)}
- .video-art{padding-top:100px}
- .video-note{font-size:12px;max-width:175px}
- .video-arrow{width:52px;height:52px;top:40px}
- .video-art:before{left:-4px;top:43px;font-size:24px}
-}
+.video-note{position:absolute;z-index:3;top:5px;right:66px;color:var(--navy);font-family:'Segoe Print','Comic Sans MS',cursive;font-size:14px;line-height:1.45;transform:rotate(4deg)}
+.video-arrow{position:absolute;z-index:3;top:2px;right:4px;width:66px;height:66px;color:var(--terracotta);overflow:visible;pointer-events:none}
+@media(max-width:850px){.video-section{padding:56px 0}.video-grid{grid-template-columns:1fr;gap:30px}.video-copy{max-width:680px}.video-art{width:100%;max-width:470px;margin:0 auto;padding-top:82px;padding-bottom:22px}.video-frame{max-width:410px}.video-frame video{height:auto;min-height:0;max-height:68vh;object-fit:contain}.video-note{right:64px}.video-arrow{top:0;right:6px;width:58px;height:58px}.foliage-shadow{right:-14%;bottom:-5%;width:68%;height:42%}.video-art:before{left:-8%;top:2px;width:42%;height:145px}}
+@media(max-width:480px){.video-section{padding:44px 0}.video-title{font-size:clamp(2.35rem,10vw,3.15rem);letter-spacing:-1px}.video-intro{font-size:.96rem}.video-frame{padding:3px;border-radius:12px}.video-frame video{border-radius:9px}.video-benefit{gap:12px}.video-icon{flex-basis:40px;width:40px;height:40px}.video-art{padding-top:78px}.video-note{font-size:12px;right:58px}.video-arrow{top:0;right:0;width:54px;height:54px}.foliage-shadow{right:-12%;bottom:-4%;width:65%;height:34%}.video-art:before{left:-10%;width:45%;height:125px}}
 
 </style>
 </head>
@@ -258,14 +209,14 @@ footer strong{color:var(--yellow)}
         <p class="note">Publications personnalisées · Stories · Création visuelle</p>
       </div>
       <div class="hero-slideshow" id="heroSlideshow" aria-label="Diaporama des secteurs professionnels">
-        <div class="slide active"><img src="assets/images/slide-01-boutique.jpg" alt="Vendeuse aidant une cliente à choisir un pantalon dans une boutique de vêtements" fetchpriority="high"><div class="slide-caption"><span>01 / 08</span><strong>Boutiques &amp; e-commerce</strong></div></div>
-        <div class="slide"><img src="assets/images/slide-02-artisans.jpg" alt="Artisan travaillant le bois dans son atelier" loading="lazy"><div class="slide-caption"><span>02 / 08</span><strong>Artisans &amp; créateurs</strong></div></div>
-        <div class="slide"><img src="assets/images/slide-03-beaute.jpg" alt="Personne recevant un soin esthétique du visage" loading="lazy"><div class="slide-caption"><span>03 / 08</span><strong>Beauté &amp; bien-être</strong></div></div>
-        <div class="slide"><img src="assets/images/slide-04-immobilier.jpg" alt="Bien immobilier présenté à la vente" loading="lazy"><div class="slide-caption"><span>04 / 08</span><strong>Immobilier &amp; habitat</strong></div></div>
-        <div class="slide"><img src="assets/images/slide-05-independants.jpg" alt="Consultant accompagnant un client autour de documents professionnels" loading="lazy"><div class="slide-caption"><span>05 / 08</span><strong>Indépendants &amp; services</strong></div></div>
-        <div class="slide"><img src="assets/images/slide-06-boulangerie.jpg" alt="Artisan boucher préparant une pièce de viande dans son atelier" loading="lazy"><div class="slide-caption"><span>06 / 08</span><strong>Métiers de bouche</strong></div></div>
-        <div class="slide"><img src="assets/images/slide-07-pizzaiolo.jpg" alt="Pizzaiolo garnissant une pizza dans une cuisine professionnelle" loading="lazy"><div class="slide-caption"><span>07 / 08</span><strong>Restaurants &amp; cafés</strong></div></div>
-        <div class="slide"><img src="assets/images/slide-08-fleuriste.jpg" alt="Fleuriste composant un bouquet dans sa boutique" loading="lazy"><div class="slide-caption"><span>08 / 08</span><strong>Fleuristes &amp; végétal</strong></div></div>
+        <div class="slide active"><img src="assets/images/slide-01-boutique-option-3.jpg" alt="Vendeuse conseillant une cliente dans une boutique de vêtements" fetchpriority="high"><div class="slide-caption"><span>01 / 08</span><strong>Boutiques &amp; e-commerce</strong></div></div>
+        <div class="slide"><img src="assets/images/slide-02-artisans-option-1.jpg" alt="Artisan menuisier travaillant le bois dans son atelier" loading="lazy"><div class="slide-caption"><span>02 / 08</span><strong>Artisans &amp; créateurs</strong></div></div>
+        <div class="slide"><img src="assets/images/slide-03-beaute-option-1.jpg" alt="Professionnel du massage réalisant un soin bien-être à une cliente" loading="lazy"><div class="slide-caption"><span>03 / 08</span><strong>Beauté &amp; bien-être</strong></div></div>
+        <div class="slide"><img src="assets/images/slide-04-immobilier-option-2.jpg" alt="Agent immobilier faisant visiter une maison à une famille" loading="lazy"><div class="slide-caption"><span>04 / 08</span><strong>Immobilier &amp; habitat</strong></div></div>
+        <div class="slide"><img src="assets/images/slide-05-independants-option-1.jpg" alt="Deux professionnels de profils différents travaillant ensemble sur un ordinateur" loading="lazy"><div class="slide-caption"><span>05 / 08</span><strong>Indépendants &amp; services</strong></div></div>
+        <div class="slide"><img src="assets/images/slide-06-metiers-de-bouche-option-2.jpg" alt="Deux bouchers préparant une pièce de viande dans leur boutique" loading="lazy"><div class="slide-caption"><span>06 / 08</span><strong>Boucherie &amp; métiers de bouche</strong></div></div>
+        <div class="slide"><img src="assets/images/slide-07-restaurants-option-1.jpg" alt="Chef préparant et dressant un plat dans une cuisine professionnelle" loading="lazy"><div class="slide-caption"><span>07 / 08</span><strong>Restaurants &amp; cafés</strong></div></div>
+        <div class="slide"><img src="assets/images/slide-08-fleuriste-option-1.jpg" alt="Fleuriste composant un bouquet dans sa boutique" loading="lazy"><div class="slide-caption"><span>08 / 08</span><strong>Fleuristes &amp; végétal</strong></div></div>
         <button class="slide-arrow prev" type="button" aria-label="Image précédente">‹</button><button class="slide-arrow next" type="button" aria-label="Image suivante">›</button>
         <div class="slide-dots" aria-label="Choisir une image"><button type="button" aria-label="Image 1" class="active"></button><button type="button" aria-label="Image 2"></button><button type="button" aria-label="Image 3"></button><button type="button" aria-label="Image 4"></button><button type="button" aria-label="Image 5"></button><button type="button" aria-label="Image 6"></button><button type="button" aria-label="Image 7"></button><button type="button" aria-label="Image 8"></button></div>
       </div>
