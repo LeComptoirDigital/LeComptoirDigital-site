@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#f7f4ee">
 <meta name="description" content="Le Comptoir Digital Shop : création de contenus numériques et solutions créatives pour les professionnels.">
-<title>Le Comptoir Digital Shop — Créativité & présence en ligne</title>
+<title>Le Comptoir Digital Shop — Variante C</title>
 <style>
 :root{
   --paper:#f7f4ee;
@@ -252,7 +252,379 @@ footer strong{color:var(--yellow)}
 #services.services-gallery .site-lines{right:calc(70% + 10px)}
 #services.services-gallery .phone-screen{width:98px;height:172px;flex:0 0 98px;transform:translateY(12px)}
 #services.services-gallery .phone-photo{height:96px}
-@media(max-width:760px){#services.services-gallery .gallery-service:nth-child(2) .service-art{height:252px}}</style>
+@media(max-width:760px){#services.services-gallery .gallery-service:nth-child(2) .service-art{height:252px}}/* Nouvelle direction artistique — styles limités à #portfolio. */
+#portfolio{--lm-paper:#f7f3ed;--lm-white:#fffdf9;--lm-navy:#172b46;--lm-terracotta:#b84f39;--lm-coral:#d3634c;--lm-yellow:#f2c957;--lm-ink:#2b2a28;--lm-muted:#676a70;position:relative;isolation:isolate;overflow:hidden;padding:0;color:var(--lm-ink);background:var(--lm-paper)}
+#portfolio *{box-sizing:border-box}
+#portfolio .lm-wrap{width:min(1160px,90%);margin-inline:auto}
+#portfolio .lm-intro{position:relative;min-height:690px;padding:76px 0 110px;overflow:hidden;background:linear-gradient(180deg,#f7f4ef 0%,#f4eee6 36%,#ead6c7 59%,#d99b80 83%,#c77d62 100%)}
+#portfolio .lm-kicker{display:flex;align-items:center;gap:12px;margin:0 0 34px;font-size:.82rem;font-weight:900;letter-spacing:2.1px;text-transform:uppercase;color:#302a27}
+#portfolio .lm-kicker:before{content:"";width:15px;height:15px;flex:0 0 15px;border-radius:50%;background:var(--lm-coral);box-shadow:0 0 0 7px #d3634c25}
+#portfolio .lm-headline{position:relative;z-index:2;max-width:1000px;margin:0;color:var(--lm-navy);font-family:Arial,Helvetica,sans-serif;font-size:clamp(3.2rem,8vw,6.7rem);font-weight:1000;line-height:.83;letter-spacing:-.075em;text-transform:uppercase}
+#portfolio .lm-headline span{display:block}
+#portfolio .lm-headline em{display:inline-block;position:relative;margin-top:.03em;color:var(--lm-terracotta);font-family:Georgia,'Times New Roman',serif;font-size:.88em;font-weight:500;font-style:italic;letter-spacing:-.07em;text-transform:none;white-space:nowrap}
+#portfolio .lm-headline em:after{content:"";position:absolute;z-index:-1;left:-.02em;right:-.02em;bottom:.13em;height:.17em;background:var(--lm-yellow);transform:rotate(-1.5deg);transform-origin:left center}
+#portfolio .lm-orbit{position:absolute;top:78px;right:14%;width:190px;height:190px;border:1.5px solid #d3634c66;border-radius:50%;transform:rotate(-19deg);animation:lm-orbit-drift 12s ease-in-out infinite;pointer-events:none}
+#portfolio .lm-orbit:before{content:"";position:absolute;inset:24px 13px 20px 36px;border:1px solid #d3634c42;border-radius:50%;transform:rotate(47deg)}
+#portfolio .lm-orbit i{position:absolute;width:12px;height:12px;border-radius:50%;background:var(--lm-yellow);top:38px;left:19px;box-shadow:95px 55px 0 -3px var(--lm-coral),57px 130px 0 -2px var(--lm-navy)}
+#portfolio .lm-orbit i:after{content:"";position:absolute;left:76px;top:96px;width:7px;height:7px;border-radius:50%;background:var(--lm-coral);box-shadow:-48px -60px 0 -2px var(--lm-yellow)}
+#portfolio .lm-quote{position:relative;z-index:2;max-width:800px;margin:28px 0 0 10px;padding-left:55px}
+#portfolio .lm-quote:before{content:"“";position:absolute;left:0;top:-.32em;color:var(--lm-coral);font-family:Georgia,serif;font-size:5.3rem;line-height:1}
+#portfolio .lm-quote strong{display:block;color:var(--lm-navy);font-family:Georgia,'Times New Roman',serif;font-size:clamp(1.45rem,3vw,2.15rem);font-style:italic;line-height:1.2}
+#portfolio .lm-quote p{max-width:690px;margin:12px 0 0;color:#27364b;font-size:clamp(1rem,1.8vw,1.35rem);line-height:1.65}
+#portfolio .lm-underline{display:inline;background:linear-gradient(transparent 78%,#f2c957b8 78%,#f2c957b8 91%,transparent 91%)}
+#portfolio .lm-ticker{position:relative;z-index:3;overflow:hidden;margin-top:-22px;padding:18px 0;background:var(--lm-yellow);border-block:1px solid #e2b84a;transform:rotate(-1.1deg) scale(1.015);box-shadow:0 8px 0 #172b4610}
+#portfolio .lm-ticker-track{display:flex;width:max-content;gap:32px;align-items:center;animation:lm-marquee 32s linear infinite;color:var(--lm-navy);font-size:.9rem;font-weight:1000;letter-spacing:2.2px;text-transform:uppercase;white-space:nowrap}
+#portfolio .lm-ticker-track span:after{content:"✳";margin-left:32px;color:var(--lm-terracotta)}
+#portfolio .lm-dark{position:relative;margin-top:-4px;padding:94px 0 90px;background:linear-gradient(180deg,#c77d62 0%,#75524e 7%,#172b46 22%,#172b46 100%);color:var(--lm-white)}
+#portfolio .lm-dark:before{content:"";position:absolute;left:0;right:0;top:0;height:120px;background:linear-gradient(180deg,#c77d62 0%,#172b46 100%);pointer-events:none}
+#portfolio .lm-section-head{position:relative;z-index:1;display:grid;grid-template-columns:.85fr 1.15fr;gap:40px;align-items:end;margin-bottom:36px}
+#portfolio .lm-section-head h2{max-width:470px;margin:0;color:var(--lm-white);font-size:clamp(2.6rem,5vw,4.3rem);font-weight:850;line-height:.98;letter-spacing:-.065em}
+#portfolio .lm-section-head h2 em{display:block;color:#e27b60;font-family:Georgia,serif;font-weight:400}
+#portfolio .lm-section-head p{max-width:510px;margin:0 0 4px;color:#d9d4cf;font-size:1.08rem;line-height:1.65}
+#portfolio .lm-trades{position:relative;z-index:1;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+#portfolio .lm-trade{position:relative;min-width:0;min-height:330px;overflow:hidden;background:#283c54;border-radius:5px;isolation:isolate;transform:translateY(0);transition:transform .45s cubic-bezier(.2,.8,.2,1),box-shadow .45s}
+#portfolio .lm-trade:hover{transform:translateY(-6px);box-shadow:0 22px 44px #060e1b55}
+#portfolio .lm-trade img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.8,.2,1)}
+#portfolio .lm-trade:hover img{transform:scale(1.045)}
+#portfolio .lm-trade:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#07142600 25%,#071426d9 100%);z-index:0}
+#portfolio .lm-trade-tag{position:absolute;z-index:2;top:20px;left:20px;max-width:calc(100% - 40px);padding:11px 15px;background:var(--lm-paper);color:var(--lm-navy);font-size:.78rem;font-weight:1000;letter-spacing:1.5px;text-transform:uppercase}
+#portfolio .lm-trade-copy{position:absolute;z-index:2;left:25px;right:25px;bottom:24px}
+#portfolio .lm-trade-copy small{display:block;margin-bottom:7px;color:var(--lm-yellow);font-size:.72rem;font-weight:900;letter-spacing:1.8px;text-transform:uppercase}
+#portfolio .lm-trade-copy h3{margin:0 0 8px;color:white;font-family:Georgia,serif;font-size:clamp(1.7rem,3vw,2.5rem);font-weight:500;line-height:1.05}
+#portfolio .lm-trade-copy p{max-width:480px;margin:0;color:#f1ece6;font-size:.98rem;line-height:1.5}
+#portfolio .lm-commerce{background:#e7dfd3;color:var(--lm-navy)}
+#portfolio .lm-commerce:after{background:linear-gradient(120deg,#f7f3ed 0%,#f7f3ed00 58%),linear-gradient(0deg,#172b46f0 0%,#172b4600 65%)}
+#portfolio .lm-commerce-art{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#e7dfd3,#c9d7d4);overflow:hidden}
+#portfolio .lm-store-window{position:relative;width:68%;height:66%;border:9px solid #172b46;border-bottom-width:20px;background:#fffdf9;box-shadow:18px 18px 0 #f2c957,0 25px 55px #172b4640;transform:rotate(-4deg);transition:transform .65s}
+#portfolio .lm-trade:hover .lm-store-window{transform:rotate(0) translateY(-5px)}
+#portfolio .lm-store-window:before{content:"LE COMPTOIR";position:absolute;left:0;right:0;top:0;padding:7px;background:#172b46;color:#fffdf9;font-size:clamp(.45rem,1vw,.75rem);font-weight:900;letter-spacing:2px;text-align:center}
+#portfolio .lm-store-shelves{position:absolute;inset:42px 12px 12px;display:grid;grid-template-columns:repeat(3,1fr);gap:10px;align-items:end}
+#portfolio .lm-store-shelves i{position:relative;display:block;height:72%;background:#d3634c}
+#portfolio .lm-store-shelves i:nth-child(2){height:90%;background:#f2c957}
+#portfolio .lm-store-shelves i:nth-child(3){height:60%;background:#54796f}
+#portfolio .lm-store-shelves i:before{content:"";position:absolute;left:15%;right:15%;top:15%;height:45%;background:#fffdf9aa;border-block:2px solid #172b4633}
+#portfolio .lm-store-shelves i:after{content:"";position:absolute;left:25%;right:25%;bottom:10%;height:12%;background:#172b46}
+#portfolio .lm-process{position:relative;z-index:1;padding:96px 0 90px;background:var(--lm-paper);color:var(--lm-navy);overflow:hidden}
+#portfolio .lm-process-top{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:55px}
+#portfolio .lm-eyebrow{margin:0 0 13px;color:var(--lm-terracotta);font-size:.76rem;font-weight:1000;letter-spacing:2px;text-transform:uppercase}
+#portfolio .lm-process h2,#portfolio .lm-supports h2{max-width:690px;margin:0;font-size:clamp(2.8rem,5.6vw,5rem);font-weight:900;line-height:.95;letter-spacing:-.07em}
+#portfolio .lm-process h2 em,#portfolio .lm-supports h2 em{color:var(--lm-terracotta);font-family:Georgia,serif;font-weight:400}
+#portfolio .lm-process-top>p{max-width:390px;margin:0;color:var(--lm-muted);font-size:1.03rem;line-height:1.65}
+#portfolio .lm-steps{position:relative;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+#portfolio .lm-steps-line{position:absolute;z-index:0;left:8%;right:8%;top:37px;width:84%;height:90px;overflow:visible;pointer-events:none}
+#portfolio .lm-steps-line path{fill:none;stroke:var(--lm-yellow);stroke-width:4;stroke-linecap:round;stroke-dasharray:1000;stroke-dashoffset:1000;transition:stroke-dashoffset 1.8s ease}
+#portfolio .lm-steps.is-visible .lm-steps-line path{stroke-dashoffset:0}
+#portfolio .lm-step{position:relative;z-index:1;padding-top:2px}
+#portfolio .lm-step-number{display:grid;place-items:center;width:74px;height:74px;margin-bottom:26px;border:2px solid var(--lm-navy);border-radius:50%;background:var(--lm-paper);color:var(--lm-navy);font-family:Georgia,serif;font-size:1.75rem;box-shadow:0 0 0 8px var(--lm-paper);transition:background .3s,color .3s,transform .5s}
+#portfolio .lm-step:hover .lm-step-number{background:var(--lm-navy);color:white;transform:rotate(-8deg) scale(1.06)}
+#portfolio .lm-step h3{margin:0 0 9px;font-size:1.45rem;letter-spacing:-.04em}
+#portfolio .lm-step p{max-width:310px;margin:0;color:var(--lm-muted);line-height:1.6}
+#portfolio .lm-supports{position:relative;overflow:hidden;padding:100px 0;background:#e9e0d4;color:var(--lm-navy)}
+#portfolio .lm-supports:after{content:"";position:absolute;right:-140px;top:-170px;width:450px;height:450px;border:1px solid #b84f393d;border-radius:50%;box-shadow:0 0 0 28px #b84f3910,0 0 0 62px #b84f3908;pointer-events:none}
+#portfolio .lm-support-head{position:relative;z-index:1;display:grid;grid-template-columns:1fr .65fr;gap:35px;align-items:end;margin-bottom:45px}
+#portfolio .lm-support-head p{max-width:340px;margin:0;color:#545a62;line-height:1.65}
+#portfolio .lm-support-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.08fr .78fr .9fr;gap:22px;align-items:center}
+#portfolio .lm-mock{position:relative;min-width:0;min-height:315px;padding:20px;background:var(--lm-white);box-shadow:0 18px 42px #172b4617;transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+#portfolio .lm-mock:nth-child(1){transform:rotate(-2deg)}
+#portfolio .lm-mock:nth-child(2){transform:rotate(2.5deg) translateY(16px)}
+#portfolio .lm-mock:nth-child(3){transform:rotate(-1deg) translateY(-8px)}
+#portfolio .lm-mock:hover{transform:translateY(-8px) rotate(0deg)}
+#portfolio .lm-mock-label{display:flex;justify-content:space-between;gap:12px;margin-bottom:12px;color:#7b7b78;font-size:.64rem;font-weight:900;letter-spacing:1.3px;text-transform:uppercase}
+#portfolio .lm-post-art{position:relative;display:grid;place-items:center;min-height:190px;overflow:hidden;background:#172b46;color:white}
+#portfolio .lm-post-art img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.75}
+#portfolio .lm-post-art:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#172b46db,transparent 75%)}
+#portfolio .lm-post-title{position:relative;z-index:1;max-width:85%;margin:0;color:white;font-family:Georgia,serif;font-size:clamp(1.5rem,2.5vw,2.3rem);line-height:.98;text-align:center}
+#portfolio .lm-post-caption{margin:13px 0 0;color:#62646a;font-size:.8rem;line-height:1.5}
+#portfolio .lm-story-art{display:grid;grid-template-columns:1fr 1fr;gap:7px;min-height:240px;padding:8px;background:#f2c957}
+#portfolio .lm-story-art figure{position:relative;margin:0;overflow:hidden;background:#d3634c}
+#portfolio .lm-story-art img{width:100%;height:100%;min-height:220px;object-fit:cover;display:block}
+#portfolio .lm-story-art figure:after{content:"NOUVEAU";position:absolute;left:7px;right:7px;bottom:7px;padding:5px 3px;background:#172b46;color:#fff;font-size:.57rem;font-weight:900;letter-spacing:1px;text-align:center}
+#portfolio .lm-beforeafter{display:grid;grid-template-columns:1fr 1fr;gap:5px;min-height:240px;background:#d3d9d4;padding:8px}
+#portfolio .lm-beforeafter div{position:relative;overflow:hidden;background:#c6b9a8}
+#portfolio .lm-beforeafter img{display:block;width:100%;height:100%;min-height:220px;object-fit:cover}
+#portfolio .lm-beforeafter span{position:absolute;left:5px;top:5px;padding:4px 6px;background:var(--lm-paper);color:var(--lm-navy);font-size:.58rem;font-weight:900;letter-spacing:1px;text-transform:uppercase}
+#portfolio .lm-ending{position:relative;isolation:isolate;overflow:hidden;padding:110px 0 115px;background:var(--lm-navy);color:var(--lm-white)}
+#portfolio .lm-ending:before{content:"";position:absolute;z-index:-1;inset:0;background:radial-gradient(ellipse at 80% 20%,#b84f394f,transparent 35%),linear-gradient(120deg,#172b46 35%,#263d57 100%)}
+#portfolio .lm-ending-grid{display:grid;grid-template-columns:1fr auto;gap:35px;align-items:center}
+#portfolio .lm-ending h2{max-width:800px;margin:0;font-size:clamp(2.8rem,6vw,5.8rem);font-weight:900;line-height:.92;letter-spacing:-.07em}
+#portfolio .lm-ending h2 em{color:var(--lm-yellow);font-family:Georgia,serif;font-weight:400}
+#portfolio .lm-ending p{max-width:640px;margin:20px 0 0;color:#dbe0e7;font-size:1.08rem;line-height:1.65}
+#portfolio .lm-ending .btn{white-space:nowrap}
+#portfolio .lm-reveal{opacity:0;transform:translateY(24px);transition:opacity .75s ease,transform .75s cubic-bezier(.2,.8,.2,1)}
+#portfolio .lm-reveal.is-visible{opacity:1;transform:translateY(0)}
+@keyframes lm-orbit-drift{0%,100%{transform:rotate(-19deg) translateY(0)}50%{transform:rotate(4deg) translateY(8px)}}
+@keyframes lm-marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media(max-width:850px){
+ #portfolio .lm-intro{min-height:610px;padding:65px 0 90px}
+ #portfolio .lm-orbit{right:5%;top:90px;width:145px;height:145px;opacity:.72}
+ #portfolio .lm-headline{font-size:clamp(3rem,10vw,5.6rem)}
+ #portfolio .lm-section-head,#portfolio .lm-support-head{grid-template-columns:1fr;gap:17px}
+ #portfolio .lm-trades{gap:15px}
+ #portfolio .lm-trade{min-height:300px}
+ #portfolio .lm-process-top{display:block}
+ #portfolio .lm-process-top>p{margin-top:20px}
+ #portfolio .lm-support-grid{grid-template-columns:1fr 1fr}
+ #portfolio .lm-mock:nth-child(3){grid-column:1/-1;width:75%;justify-self:center}
+ #portfolio .lm-ending-grid{grid-template-columns:1fr;align-items:start}
+}
+@media(max-width:560px){
+ #portfolio .lm-wrap{width:88%}
+ #portfolio .lm-intro{min-height:560px;padding:54px 0 86px}
+ #portfolio .lm-kicker{max-width:290px;font-size:.69rem;letter-spacing:1.35px}
+ #portfolio .lm-headline{font-size:clamp(2.8rem,12.4vw,4.3rem);letter-spacing:-.075em}
+ #portfolio .lm-headline em{font-size:.78em}
+ #portfolio .lm-orbit{right:-24px;top:75px;width:120px;height:120px;opacity:.55}
+ #portfolio .lm-quote{margin-left:0;padding-left:36px}
+ #portfolio .lm-quote:before{font-size:4rem}
+ #portfolio .lm-quote p{font-size:1rem}
+ #portfolio .lm-ticker{padding:14px 0}
+ #portfolio .lm-ticker-track{font-size:.75rem;letter-spacing:1.5px}
+ #portfolio .lm-dark{padding:68px 0 66px}
+ #portfolio .lm-section-head{gap:18px;margin-bottom:24px}
+ #portfolio .lm-section-head h2{font-size:clamp(2.55rem,11vw,3.6rem)}
+ #portfolio .lm-trades{grid-template-columns:1fr}
+ #portfolio .lm-trade{min-height:320px}
+ #portfolio .lm-trade-tag{top:14px;left:14px;padding:9px 11px;font-size:.68rem}
+ #portfolio .lm-trade-copy{left:18px;right:18px;bottom:18px}
+ #portfolio .lm-process,#portfolio .lm-supports{padding:72px 0}
+ #portfolio .lm-process h2,#portfolio .lm-supports h2{font-size:clamp(2.7rem,12vw,4rem)}
+ #portfolio .lm-steps{grid-template-columns:1fr;gap:28px}
+ #portfolio .lm-steps-line{left:35px;top:35px;width:50px;height:calc(100% - 55px)}
+ #portfolio .lm-steps-line path{stroke-dasharray:700;stroke-dashoffset:700}
+ #portfolio .lm-steps.is-visible .lm-steps-line path{stroke-dashoffset:0}
+ #portfolio .lm-step{display:grid;grid-template-columns:68px 1fr;column-gap:18px;align-items:start}
+ #portfolio .lm-step-number{grid-row:span 2;width:62px;height:62px;margin:0;font-size:1.45rem}
+ #portfolio .lm-step h3{align-self:end;margin:0 0 6px}
+ #portfolio .lm-step p{grid-column:2}
+ #portfolio .lm-support-grid{grid-template-columns:1fr;gap:25px}
+ #portfolio .lm-mock,#portfolio .lm-mock:nth-child(1),#portfolio .lm-mock:nth-child(2),#portfolio .lm-mock:nth-child(3){width:100%;min-height:0;transform:none;grid-column:auto}
+ #portfolio .lm-post-art{min-height:230px}
+ #portfolio .lm-story-art,#portfolio .lm-beforeafter{min-height:240px}
+ #portfolio .lm-ending{padding:80px 0}
+ #portfolio .lm-ending h2{font-size:clamp(2.7rem,12vw,4.2rem)}
+ #portfolio .lm-ending .btn{white-space:normal}
+}
+@media(prefers-reduced-motion:reduce){#portfolio *,#portfolio *:before,#portfolio *:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}#portfolio .lm-reveal{opacity:1;transform:none}#portfolio .lm-steps-line path{stroke-dashoffset:0}}
+/* Fin des styles ajoutés pour #portfolio. */
+/* Ajustements fidèles à la dernière capture fournie. */
+#portfolio .lm-intro{min-height:840px;padding-top:0}
+#portfolio .lm-masthead{display:flex;justify-content:space-between;align-items:center;gap:24px;padding:54px 0 0;color:#2b2a28;font-size:.88rem;letter-spacing:2px;text-transform:uppercase}
+#portfolio .lm-masthead-brand{font-weight:500;letter-spacing:1.8px}
+#portfolio .lm-masthead-note{color:#b83f2d;font-size:.82rem;font-weight:900;letter-spacing:2.1px;text-align:right}
+#portfolio .lm-kicker{margin-top:112px;margin-bottom:38px}
+#portfolio .lm-commerce-arrow{display:inline-flex;align-items:center;gap:12px;margin-top:15px;color:var(--lm-yellow);font-size:.8rem;font-weight:900;letter-spacing:1.5px;text-transform:uppercase}
+#portfolio .lm-commerce-arrow svg{width:62px;height:28px;overflow:visible}
+#portfolio .lm-commerce-arrow path{fill:none;stroke:currentColor;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:100;stroke-dashoffset:0;transition:stroke-dashoffset .5s ease,transform .5s ease;transform-origin:center}
+#portfolio .lm-trade:hover .lm-commerce-arrow path{stroke-dashoffset:18;transform:translateX(5px)}
+@media(max-width:850px){#portfolio .lm-intro{min-height:760px;padding-top:0}#portfolio .lm-masthead{padding-top:36px;font-size:.72rem;letter-spacing:1px}#portfolio .lm-masthead-note{font-size:.67rem;letter-spacing:1.1px}#portfolio .lm-kicker{margin-top:95px}}
+@media(max-width:560px){#portfolio .lm-intro{min-height:690px;padding-top:0}#portfolio .lm-masthead{align-items:flex-start;gap:18px;padding-top:27px;font-size:.62rem;letter-spacing:.8px}#portfolio .lm-masthead-brand{max-width:46%;line-height:1.5}#portfolio .lm-masthead-note{max-width:50%;font-size:.59rem;line-height:1.5;letter-spacing:.8px}#portfolio .lm-kicker{margin-top:83px;margin-bottom:28px}}
+
+
+/* Variante B — ajustements comparatifs, limités à la section portfolio et aux visuels déjà présents des services. */
+#services.services-gallery{position:relative;z-index:1;padding-bottom:72px;border-bottom:0;background:linear-gradient(180deg,#eef2ef 0%,#eef2ef 74%,#f3f1eb 100%)}
+#services.services-gallery:after{content:"";position:absolute;z-index:0;left:0;right:0;bottom:-1px;height:92px;background:linear-gradient(180deg,#eef2ef00 0%,#f7f3ed 100%);pointer-events:none}
+#services.services-gallery .gallery-wrap{position:relative;z-index:1}
+#portfolio{position:relative;z-index:2;margin-top:-42px;background:#f7f3ed}
+#portfolio .lm-intro{min-height:0;padding:0 0 58px;background:linear-gradient(180deg,#f0f1eb 0%,#f7f4ef 13%,#f4eee6 34%,#ead6c7 58%,#d99b80 82%,#c77d62 100%)}
+#portfolio .lm-masthead{padding-top:30px}
+#portfolio .lm-kicker{margin-top:58px;margin-bottom:25px}
+#portfolio .lm-headline{max-width:860px;font-size:clamp(2.9rem,6.2vw,5.15rem);line-height:.88;letter-spacing:-.073em}
+#portfolio .lm-headline em{font-size:.8em}
+#portfolio .lm-orbit{top:75px;right:13%;width:176px;height:144px;border:0;border-radius:50%;transform:rotate(-24deg);animation:lm-galaxy-float 13s ease-in-out infinite}
+#portfolio .lm-orbit:before{inset:9px -12px 9px -12px;border:1px solid #b84f3970;transform:rotate(38deg);border-radius:50% 44% 50% 46%}
+#portfolio .lm-orbit:after{content:"";position:absolute;inset:24px 20px;border:1px dashed #172b4655;border-radius:50%;transform:rotate(-28deg)}
+#portfolio .lm-orbit-core{position:absolute;left:50%;top:50%;width:22px;height:22px;border-radius:50%;transform:translate(-50%,-50%);background:radial-gradient(circle at 32% 28%,#fff4c7 0 10%,#f2c957 28%,#c76a4f 75%,#8d3f37 100%);box-shadow:0 0 0 8px #f2c95724,0 0 28px #f2c95755}
+#portfolio .lm-orbit i{top:8px;left:48%;width:9px;height:9px;background:#b84f39;box-shadow:70px 32px 0 1px #f2c957,-50px 94px 0 -1px #54796f}
+#portfolio .lm-orbit i:after{left:114px;top:60px;width:6px;height:6px;background:#172b46;box-shadow:-100px -20px 0 1px #d3634c}
+#portfolio .lm-orbit b{position:absolute;left:8px;bottom:20px;width:7px;height:7px;border-radius:50%;background:#f2c957;box-shadow:0 0 0 4px #f2c95724}
+#portfolio .lm-quote{margin-top:20px}
+#portfolio .lm-quote strong{font-size:clamp(1.35rem,2.6vw,1.9rem)}
+#portfolio .lm-quote p{margin-top:7px;font-size:clamp(.95rem,1.45vw,1.15rem);line-height:1.5}
+#portfolio .lm-ticker{margin-top:-14px;padding:14px 0;border-top:1px solid #e2b84a;border-bottom:0;box-shadow:none;transform:rotate(-.65deg) scale(1.015)}
+#portfolio .lm-dark{padding:65px 0 64px;background:linear-gradient(180deg,#c77d62 0%,#987065 5%,#172b46 20%,#172b46 100%)}
+#portfolio .lm-dark:before{height:95px;background:linear-gradient(180deg,#c77d62 0%,#172b46 100%)}
+#portfolio .lm-section-head{gap:30px;margin-bottom:28px}
+#portfolio .lm-section-head h2{font-size:clamp(2.25rem,4.1vw,3.45rem)}
+#portfolio .lm-section-head p{font-size:.98rem;line-height:1.5}
+#portfolio .lm-trades{gap:18px}
+#portfolio .lm-trade{min-height:300px}
+#portfolio .lm-commerce-art{background:linear-gradient(130deg,#f4e5d2 0%,#d8e2d9 52%,#c2d5dd 100%)}
+#portfolio .lm-store-window{width:63%;height:62%;border-width:7px;border-bottom-width:17px;box-shadow:13px 13px 0 #f2c957,0 20px 40px #172b4633}
+#portfolio .lm-store-shelves{gap:8px;inset:39px 10px 10px}
+#portfolio .lm-store-shelves i{border-radius:2px 2px 0 0}
+#portfolio .lm-store-shelves i:before{background:linear-gradient(135deg,#fffdf9cc,#fffdf900);border-block:1px solid #172b4633}
+#portfolio .lm-commerce-arrow{margin-top:10px;font-size:.72rem}
+#portfolio .lm-process{padding:66px 0 62px}
+#portfolio .lm-process-top{margin-bottom:38px}
+#portfolio .lm-process h2,#portfolio .lm-supports h2{font-size:clamp(2.35rem,4.6vw,4.1rem);line-height:.98}
+#portfolio .lm-process-top>p{max-width:355px;font-size:.96rem;line-height:1.5}
+#portfolio .lm-steps{gap:20px}
+#portfolio .lm-steps-line{top:31px;height:95px}
+#portfolio .lm-steps-line path{stroke:url(#lmFlowGradient);stroke-width:4.5;marker-end:url(#lmFlowArrow);stroke-dasharray:14 8;stroke-dashoffset:1000}
+#portfolio .lm-steps.is-visible .lm-steps-line path{animation:lm-flow-dash 10s linear infinite;stroke-dashoffset:0}
+#portfolio .lm-step{padding-top:0}
+#portfolio .lm-step:after{content:"";position:absolute;top:80px;left:18px;width:25px;height:7px;border-radius:9px;background:linear-gradient(90deg,#b84f39,#f2c957);transform:rotate(-34deg);opacity:.8}
+#portfolio .lm-step:nth-of-type(3):after{width:9px;height:9px;border-radius:50%;background:#54796f;box-shadow:14px -7px 0 #f2c957;transform:none}
+#portfolio .lm-step-number{width:66px;height:66px;margin-bottom:20px;font-size:1.55rem}
+#portfolio .lm-step h3{font-size:1.3rem}
+#portfolio .lm-step p{font-size:.95rem;line-height:1.5}
+#portfolio .lm-supports{padding:68px 0 74px;background:linear-gradient(135deg,#eee5d8 0%,#e4e8df 58%,#dce7e9 100%)}
+#portfolio .lm-support-head{gap:26px;margin-bottom:32px}
+#portfolio .lm-support-head p{max-width:330px;font-size:.95rem;line-height:1.5}
+#portfolio .lm-support-grid{gap:18px}
+#portfolio .lm-mock{min-height:0;padding:15px;border:1px solid #ffffffaa;box-shadow:0 15px 34px #172b4620;transition:transform .45s cubic-bezier(.2,.8,.2,1),box-shadow .45s}
+#portfolio .lm-mock:nth-child(1){background:#f6d9ce;transform:rotate(-1.4deg)}
+#portfolio .lm-mock:nth-child(2){background:#f3d982;transform:rotate(1.7deg) translateY(12px)}
+#portfolio .lm-mock:nth-child(3){background:#d4e3dc;transform:rotate(-.8deg) translateY(-5px)}
+#portfolio .lm-mock:hover{z-index:4;transform:translateY(-10px) scale(1.035) rotate(0);box-shadow:0 24px 46px #172b4630}
+#portfolio .lm-mock-label{color:#29384d}
+#portfolio .lm-post-art,#portfolio .lm-story-art,#portfolio .lm-beforeafter{box-shadow:0 5px 0 #172b4610}
+#portfolio .lm-post-art img,#portfolio .lm-story-art img,#portfolio .lm-beforeafter img{transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+#portfolio .lm-mock:hover .lm-post-art img,#portfolio .lm-mock:hover .lm-story-art img,#portfolio .lm-mock:hover .lm-beforeafter img{transform:scale(1.055)}
+#portfolio .lm-post-caption{color:#404a57;font-size:.76rem;line-height:1.45}
+#portfolio .lm-ending{padding:78px 0 82px}
+#portfolio .lm-ending-grid{gap:26px}
+#portfolio .lm-ending h2{font-size:clamp(2.5rem,5vw,4.7rem)}
+#portfolio .lm-ending p{margin-top:14px;font-size:1rem;line-height:1.5}
+@keyframes lm-galaxy-float{0%,100%{transform:rotate(-24deg) translateY(0)}50%{transform:rotate(-12deg) translateY(5px)}}
+@keyframes lm-flow-dash{from{stroke-dashoffset:0}to{stroke-dashoffset:-180}}
+@media(max-width:850px){
+ #services.services-gallery{padding-bottom:62px}
+ #portfolio{margin-top:-28px}
+ #portfolio .lm-intro{padding-bottom:48px}
+ #portfolio .lm-kicker{margin-top:48px;margin-bottom:24px}
+ #portfolio .lm-headline{font-size:clamp(2.8rem,8.6vw,4.7rem)}
+ #portfolio .lm-orbit{right:4%;top:78px;width:130px;height:115px;opacity:.8}
+ #portfolio .lm-section-head h2{font-size:clamp(2.3rem,7vw,3.2rem)}
+ #portfolio .lm-process,#portfolio .lm-supports{padding:58px 0}
+ #portfolio .lm-ending{padding:66px 0}
+}
+@media(max-width:560px){
+ #services.services-gallery{padding-bottom:52px}
+ #portfolio{margin-top:-18px}
+ #portfolio .lm-intro{padding-bottom:38px}
+ #portfolio .lm-masthead{padding-top:22px}
+ #portfolio .lm-kicker{margin-top:42px;margin-bottom:22px}
+ #portfolio .lm-headline{font-size:clamp(2.5rem,10.5vw,3.8rem);line-height:.9}
+ #portfolio .lm-headline em{font-size:.76em}
+ #portfolio .lm-orbit{right:-22px;top:72px;width:108px;height:96px;opacity:.65}
+ #portfolio .lm-quote{margin-top:18px}
+ #portfolio .lm-ticker{padding:12px 0}
+ #portfolio .lm-dark{padding:52px 0}
+ #portfolio .lm-section-head h2{font-size:clamp(2.25rem,9.8vw,3.1rem)}
+ #portfolio .lm-process,#portfolio .lm-supports{padding:52px 0}
+ #portfolio .lm-steps{gap:24px}
+ #portfolio .lm-steps-line{left:30px;top:30px;width:44px;height:calc(100% - 45px)}
+ #portfolio .lm-step:after{left:14px;top:66px}
+ #portfolio .lm-support-grid{gap:22px}
+ #portfolio .lm-ending{padding:60px 0}
+}
+@media(prefers-reduced-motion:reduce){#portfolio .lm-steps.is-visible .lm-steps-line path{animation:none;stroke-dashoffset:0}}
+
+
+/* VARIANTE C — ajustements compacts demandés, isolés à #portfolio */
+@media (min-width: 851px) {
+  #portfolio .lm-intro { min-height: 0; padding: 22px 0 48px; }
+  #portfolio .lm-masthead { padding-top: 16px; font-size: .78rem; }
+  #portfolio .lm-masthead-note { font-size: .72rem; }
+  #portfolio .lm-kicker { margin-top: 24px; margin-bottom: 20px; font-size: .76rem; }
+  #portfolio .lm-headline { max-width: 900px; font-size: clamp(3.1rem, 5.7vw, 5.25rem); line-height: .84; }
+  #portfolio .lm-headline em { font-size: .78em; }
+  #portfolio .lm-orbit { top: 76px; right: 13%; width: 158px; height: 132px; }
+  #portfolio .lm-quote { margin-top: 14px; max-width: 720px; }
+  #portfolio .lm-quote strong { font-size: clamp(1.25rem, 2.1vw, 1.75rem); }
+  #portfolio .lm-quote p { margin-top: 6px; font-size: 1rem; line-height: 1.42; }
+  #portfolio .lm-ticker { margin-top: -10px; padding: 12px 0; transform: rotate(-.35deg) scale(1.01); border: 0; box-shadow: none; }
+  #portfolio .lm-ticker:after { content: none !important; }
+  #portfolio .lm-dark { padding-top: 54px; }
+  #portfolio .lm-section-head { margin-bottom: 24px; }
+  #portfolio .lm-section-head h2 { font-size: clamp(2.35rem, 4vw, 3.55rem); }
+  #portfolio .lm-section-head p { font-size: .98rem; line-height: 1.48; }
+  #portfolio .lm-trade { min-height: 285px; }
+  #portfolio .lm-process { padding: 48px 0 44px; }
+  #portfolio .lm-process-top { margin-bottom: 28px; }
+  #portfolio .lm-process h2 { font-size: clamp(2.25rem, 4vw, 3.55rem); line-height: .96; }
+  #portfolio .lm-process-top>p { max-width: 330px; font-size: .92rem; line-height: 1.45; }
+  #portfolio .lm-steps { gap: 22px; padding-top: 2px; }
+  #portfolio .lm-steps-line { left: 8%; top: 28px; width: 84%; height: 72px; }
+  #portfolio .lm-steps-line path { stroke-width: 4; stroke-dasharray: 12 7; }
+  #portfolio .lm-step-number { width: 58px; height: 58px; margin-bottom: 15px; font-size: 1.38rem; box-shadow: 0 0 0 6px var(--lm-paper); }
+  #portfolio .lm-step:after { content: none !important; }
+  #portfolio .lm-step:before { content: ''; position:absolute; top: 20px; left: 72px; width: 13px; height: 13px; border: 2px solid var(--lm-terracotta); border-radius: 4px; transform: rotate(45deg); background:var(--lm-paper); box-shadow:0 0 0 4px #f7f3ed; }
+  #portfolio .lm-step:nth-of-type(2):before { top: 22px; left: 72px; width: 11px; height: 11px; border-radius: 50%; border-color: #d6a92e; transform:none; }
+  #portfolio .lm-step:nth-of-type(3):before { top: 20px; left: 72px; width: 13px; height: 13px; border-radius: 2px 8px 2px 8px; border-color: #54796f; transform:rotate(18deg); }
+  #portfolio .lm-step h3 { margin-top: 16px; margin-bottom: 6px; font-size: 1.18rem; }
+  #portfolio .lm-step p { max-width: 300px; font-size: .9rem; line-height: 1.45; }
+  #portfolio .lm-supports { padding: 44px 0 48px; }
+  #portfolio .lm-support-head { margin-bottom: 22px; gap: 24px; }
+  #portfolio .lm-supports h2 { font-size: clamp(2.25rem, 4vw, 3.5rem); line-height: .96; }
+  #portfolio .lm-support-head p { max-width: 360px; font-size: .92rem; line-height: 1.45; }
+  #portfolio .lm-support-grid { gap: 18px; }
+  #portfolio .lm-mock { padding: 12px; }
+  #portfolio .lm-mock-label { margin-bottom: 8px; font-size: .6rem; }
+  #portfolio .lm-post-art { min-height: 155px; }
+  #portfolio .lm-post-title { font-size: clamp(1.25rem, 2vw, 1.8rem); }
+  #portfolio .lm-story-art, #portfolio .lm-beforeafter { min-height: 180px; }
+  #portfolio .lm-story-art img, #portfolio .lm-beforeafter img { min-height: 164px; }
+  #portfolio .lm-post-caption { margin-top: 9px; font-size: .72rem; line-height: 1.35; }
+}
+/* Une seule ligne de conduite : la flèche SVG se termine proprement et les motifs s'alignent aux étapes. */
+#portfolio .lm-steps-line path { marker-end: url(#lmFlowArrow); }
+#portfolio .lm-steps-line { overflow: visible; }
+@media (max-width: 850px) {
+  #portfolio .lm-intro { min-height: 0; padding: 24px 0 42px; }
+  #portfolio .lm-masthead { padding-top: 12px; }
+  #portfolio .lm-kicker { margin-top: 38px; margin-bottom: 20px; }
+  #portfolio .lm-headline { font-size: clamp(2.55rem, 7.6vw, 4.25rem); line-height: .9; }
+  #portfolio .lm-quote { margin-top: 16px; }
+  #portfolio .lm-quote p { font-size: .98rem; line-height: 1.5; }
+  #portfolio .lm-ticker { margin-top: -8px; padding: 11px 0; transform: rotate(-.3deg) scale(1.01); border: 0; box-shadow:none; }
+  #portfolio .lm-process { padding: 44px 0; }
+  #portfolio .lm-process-top { margin-bottom: 26px; }
+  #portfolio .lm-process h2, #portfolio .lm-supports h2 { font-size: clamp(2.1rem, 6.5vw, 3.2rem); }
+  #portfolio .lm-steps-line { left: 28px; top: 27px; width: 48px; height: calc(100% - 48px); }
+  #portfolio .lm-step:before { content:none !important; }
+  #portfolio .lm-step h3 { margin-top: 0; }
+  #portfolio .lm-supports { padding: 44px 0; }
+  #portfolio .lm-support-head { margin-bottom: 24px; }
+  #portfolio .lm-support-grid { gap: 16px; }
+  #portfolio .lm-mock, #portfolio .lm-mock:nth-child(1), #portfolio .lm-mock:nth-child(2), #portfolio .lm-mock:nth-child(3) { transform:none; }
+}
+@media (max-width: 560px) {
+  #portfolio .lm-intro { padding: 18px 0 34px; }
+  #portfolio .lm-kicker { margin-top: 35px; }
+  #portfolio .lm-headline { font-size: clamp(2.35rem, 10vw, 3.35rem); }
+  #portfolio .lm-orbit { top: 66px; right: -12px; opacity:.5; }
+  #portfolio .lm-ticker { padding: 10px 0; }
+  #portfolio .lm-process, #portfolio .lm-supports { padding: 42px 0; }
+  #portfolio .lm-process h2, #portfolio .lm-supports h2 { font-size: clamp(2.15rem, 9vw, 3rem); }
+  #portfolio .lm-steps { gap: 22px; }
+  #portfolio .lm-steps-line { left: 27px; top: 28px; width: 45px; height: calc(100% - 46px); }
+  #portfolio .lm-support-grid { grid-template-columns:1fr; }
+  #portfolio .lm-mock, #portfolio .lm-mock:nth-child(1), #portfolio .lm-mock:nth-child(2), #portfolio .lm-mock:nth-child(3) { width:100%; grid-column:auto; }
+}
+
+
+/* Variante D — liaison chronologique claire entre les étapes 01, 02 et 03. */
+#portfolio .lm-steps-line{top:31px;height:76px;overflow:visible}
+#portfolio .lm-steps-line .lm-steps-track{fill:none;stroke:url(#lmFlowGradient);stroke-width:4;stroke-linecap:round;stroke-dasharray:12 9;stroke-dashoffset:0;animation:lm-timeline-flow 8s linear infinite}
+#portfolio .lm-steps-line .lm-step-chevron{fill:none;stroke:#172b46;stroke-width:3.2;stroke-linecap:round;stroke-linejoin:round;opacity:.9;animation:lm-chevron-travel 2.4s ease-in-out infinite}
+#portfolio .lm-steps-line .lm-chevron-two{animation-delay:.55s}
+#portfolio .lm-steps-line .lm-chevron-end{stroke:#54796f;animation-delay:1.1s}
+#portfolio .lm-step:after{content:none!important}
+#portfolio .lm-step:before{content:none!important}
+#portfolio .lm-step-number{position:relative;z-index:1;transition:transform .45s cubic-bezier(.2,.8,.2,1),background .35s,color .35s,box-shadow .35s}
+#portfolio .lm-step:hover .lm-step-number{transform:translateY(-5px) scale(1.07);box-shadow:0 0 0 8px var(--lm-paper),0 10px 22px #172b4622}
+#portfolio .lm-step h3{transition:color .3s,transform .35s}
+#portfolio .lm-step:hover h3{color:#b84f39;transform:translateX(3px)}
+@keyframes lm-timeline-flow{to{stroke-dashoffset:-168}}
+@keyframes lm-chevron-travel{0%,100%{opacity:.45;transform:translateX(-3px)}50%{opacity:1;transform:translateX(4px)}}
+@media(max-width:850px){#portfolio .lm-steps-line{top:28px;height:72px}}
+@media(max-width:560px){#portfolio .lm-steps-line{left:28px;top:28px;width:48px;height:calc(100% - 48px)}#portfolio .lm-steps-line .lm-steps-track{stroke-dasharray:8 8}#portfolio .lm-steps-line .lm-step-chevron{display:none}}
+@media(prefers-reduced-motion:reduce){#portfolio .lm-steps-line .lm-steps-track,#portfolio .lm-steps-line .lm-step-chevron{animation:none!important}}
+/* Fin variante D. */
+
+</style>
 </head>
 <body>
 <header>
@@ -347,19 +719,98 @@ footer strong{color:var(--yellow)}
   </div>
 </section>
 
-<section id="portfolio">
-  <div class="wrap">
-    <div class="section-top">
-      <div><div class="kicker">Plusieurs univers, une même exigence</div><h2 class="section-title">Votre métier mérite<br>son propre langage visuel.</h2></div>
-      <p class="section-desc">Les couleurs, les mots et les formats évoluent selon le secteur. L'objectif : rester fidèle à chaque marque plutôt que d'appliquer le même style à tout le monde.</p>
+<section id="portfolio" aria-labelledby="lm-main-title">
+  <div class="lm-intro">
+    <div class="lm-wrap">
+      <div class="lm-masthead"><span class="lm-masthead-brand">Le Comptoir Digital Shop</span><span class="lm-masthead-note">Après nos services · Place aux possibles</span></div>
+      <p class="lm-kicker">Le même regard, des métiers différents</p>
+      <div class="lm-orbit" aria-hidden="true"><span class="lm-orbit-core"></span><i></i><b></b></div>
+      <h2 class="lm-headline" id="lm-main-title"><span>Votre métier mérite</span><span>son propre</span><em>langage visuel.</em></h2>
+      <div class="lm-quote">
+        <strong>Chaque métier a son petit monde.</strong>
+        <p>Nous en faisons le point de départ : une idée juste, un univers qui se remarque, <span class="lm-underline">des supports qui travaillent ensemble.</span></p>
+      </div>
     </div>
-    <div class="portfolio-grid">
-      <article class="portfolio-item"><div class="portfolio-caption">01 · Gourmand & chaleureux</div><div><div class="portfolio-symbol">✳</div><h3>Restaurants<br>& métiers de bouche</h3><p>Menus, nouveautés, produits et moments à partager.</p></div></article>
-      <article class="portfolio-item"><div class="portfolio-caption">02 · Vivant & commerçant</div><div><div class="portfolio-symbol">✦</div><h3>Boutiques<br>& commerces</h3><p>Collections, promotions et coups de cœur.</p></div></article>
-      <article class="portfolio-item"><div class="portfolio-caption">03 · Authentique & humain</div><div><div class="portfolio-symbol">✺</div><h3>Artisans<br>& créateurs</h3><p>Gestes, matières et savoir-faire au premier plan.</p></div></article>
-      <article class="portfolio-item"><div class="portfolio-caption">04 · Clair & professionnel</div><div><div class="portfolio-symbol">↗</div><h3>Indépendants<br>& services</h3><p>Expertise, accompagnement et confiance.</p></div></article>
+  </div>
+  <div class="lm-ticker" aria-label="Métiers accompagnés">
+    <div class="lm-ticker-track" aria-hidden="true">
+      <span>Artisan</span><span>Beauté &amp; bien-être</span><span>Commerce</span><span>Restaurant</span><span>Indépendant</span><span>E-commerce</span><span>Créateur</span><span>Artisan</span><span>Beauté &amp; bien-être</span><span>Commerce</span><span>Restaurant</span><span>Indépendant</span><span>E-commerce</span><span>Créateur</span>
     </div>
-    <p class="disclaimer">Ces compositions illustrent différentes directions créatives. Elles ne constituent pas des commandes clients réelles.</p>
+  </div>
+  <div class="lm-dark">
+    <div class="lm-wrap">
+      <div class="lm-section-head lm-reveal">
+        <h2>Les bons codes.<em>Votre propre signature.</em></h2>
+        <p>On part de votre métier et de vos objectifs. La création s’adapte au projet, jamais l’inverse.</p>
+      </div>
+      <div class="lm-trades">
+        <article class="lm-trade lm-reveal">
+          <img src="slide-02-artisans-option-1.jpg" alt="Artisan au travail dans son atelier" loading="lazy">
+          <span class="lm-trade-tag">01 · Artisanat &amp; création</span>
+          <div class="lm-trade-copy"><small>Le geste · La matière</small><h3>Le savoir-faire en premier.</h3><p>Des images qui racontent le geste, la précision et la singularité de chaque création.</p></div>
+        </article>
+        <article class="lm-trade lm-reveal">
+          <img src="slide-03-beaute-option-1.jpg" alt="Professionnel réalisant un soin beauté et bien-être" loading="lazy">
+          <span class="lm-trade-tag">02 · Beauté &amp; bien-être</span>
+          <div class="lm-trade-copy"><small>Le soin · La confiance</small><h3>Faire ressentir l’expérience.</h3><p>Une direction visuelle douce et précise, portée par les gestes, les détails et l’atmosphère.</p></div>
+        </article>
+        <article class="lm-trade lm-reveal">
+          <div class="lm-commerce-art" aria-hidden="true"><div class="lm-store-window"><div class="lm-store-shelves"><i></i><i></i><i></i></div></div></div>
+          <span class="lm-trade-tag">03 · Commerce &amp; e-commerce</span>
+          <div class="lm-trade-copy"><small>La vitrine · Le choix</small><h3>Votre boutique en ligne.</h3><p>Une identité qui attire l’œil, met les produits en valeur et accompagne le client jusqu’au panier.</p><span class="lm-commerce-arrow">Du premier regard au panier <svg viewBox="0 0 70 30" aria-hidden="true"><path d="M2 8 C18 -1 26 26 43 18 S58 8 66 13 M56 5 L66 13 L56 21"/></svg></span></div>
+        </article>
+        <article class="lm-trade lm-reveal">
+          <img src="slide-06-metiers-de-bouche-option-2.jpg" alt="Métier de bouche, préparation et savoir-faire culinaire" loading="lazy">
+          <span class="lm-trade-tag">04 · Métiers de bouche</span>
+          <div class="lm-trade-copy"><small>Le produit · Le partage</small><h3>Donner envie, sans en faire trop.</h3><p>Des contenus gourmands et vivants qui mettent en avant les produits, les gestes et les nouveautés.</p></div>
+        </article>
+      </div>
+    </div>
+  </div>
+  <div class="lm-process">
+    <div class="lm-wrap">
+      <div class="lm-process-top lm-reveal">
+        <div><p class="lm-eyebrow">Une idée traverse le projet</p><h2>Du premier échange<br><em>à une présence cohérente.</em></h2></div>
+        <p>Chaque étape donne la main à la suivante. Le fil reste le même, du besoin de départ au contenu prêt à vivre.</p>
+      </div>
+      <div class="lm-steps">
+        <svg class="lm-steps-line" viewBox="0 0 1000 100" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="lmFlowGradient" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#b84f39"/><stop offset="48%" stop-color="#f2c957"/><stop offset="100%" stop-color="#54796f"/></linearGradient></defs><path class="lm-steps-track" d="M24 36 C145 28 205 28 326 36 S505 44 666 36 S850 28 964 36"/><path class="lm-step-chevron lm-chevron-one" d="M312 27 L324 36 L312 45"/><path class="lm-step-chevron lm-chevron-two" d="M642 27 L654 36 L642 45"/><path class="lm-step-chevron lm-chevron-end" d="M946 27 L958 36 L946 45"/></svg>
+        <article class="lm-step lm-reveal"><div class="lm-step-number">01</div><h3>On capte l’idée.</h3><p>Votre activité, votre public, votre façon de faire et ce que vous voulez faire ressentir.</p></article>
+        <article class="lm-step lm-reveal"><div class="lm-step-number">02</div><h3>On trouve le ton.</h3><p>Les couleurs, les mots, les images et le format qui donnent une direction juste au projet.</p></article>
+        <article class="lm-step lm-reveal"><div class="lm-step-number">03</div><h3>On donne forme.</h3><p>Un ensemble cohérent de supports, pensé pour se répondre et vivre sur les bons canaux.</p></article>
+      </div>
+    </div>
+  </div>
+  <div class="lm-supports">
+    <div class="lm-wrap">
+      <div class="lm-support-head lm-reveal">
+        <div><p class="lm-eyebrow">Une idée, plusieurs formats</p><h2>Une idée.<br><em>Des supports qui vivent.</em></h2></div>
+        <p>Une même direction, des façons différentes de la faire exister : publication, story, avant/après. Exemples visuels fictifs.</p>
+      </div>
+      <div class="lm-support-grid">
+        <article class="lm-mock lm-reveal">
+          <div class="lm-mock-label"><span>01 / Publication</span><span>Format carré</span></div>
+          <div class="lm-post-art"><img src="slide-03-beaute-option-1.jpg" alt="" loading="lazy"><h3 class="lm-post-title">Le geste fait toute la différence.</h3></div>
+          <p class="lm-post-caption">Une image forte et un message court pour arrêter le regard dans le fil.</p>
+        </article>
+        <article class="lm-mock lm-reveal">
+          <div class="lm-mock-label"><span>02 / Story</span><span>Format vertical</span></div>
+          <div class="lm-story-art"><figure><img src="slide-02-artisans-option-1.jpg" alt="" loading="lazy"></figure><figure><img src="slide-05-independants-option-1.jpg" alt="" loading="lazy"></figure></div>
+          <p class="lm-post-caption">Un format plus direct, idéal pour montrer les coulisses, une nouveauté ou une offre.</p>
+        </article>
+        <article class="lm-mock lm-reveal">
+          <div class="lm-mock-label"><span>03 / Avant-après</span><span>Deux temps</span></div>
+          <div class="lm-beforeafter"><div><img src="slide-04-immobilier-option-2.jpg" alt="Exemple avant, visuel d'ambiance" loading="lazy"><span>Avant</span></div><div><img src="slide-01-boutique-option-3.jpg" alt="Exemple après, visuel de boutique" loading="lazy"><span>Après</span></div></div>
+          <p class="lm-post-caption">Montrer une évolution ou comparer deux moments sans perdre le fil de l’identité.</p>
+        </article>
+      </div>
+    </div>
+  </div>
+  <div class="lm-ending">
+    <div class="lm-wrap lm-ending-grid lm-reveal">
+      <div><p class="lm-eyebrow" style="color:#f2c957">Et si on ouvrait le champ ?</p><h2>Votre métier sort du cadre ? <em>Tant mieux.</em></h2><p>On imagine la suite avec vous — à l’image de votre métier, de vos idées et de ce qui vous rend différent.</p></div>
+      <a class="btn" href="#contact">Parlons de votre projet ↗</a>
+    </div>
   </div>
 </section>
 
@@ -447,5 +898,28 @@ footer strong{color:var(--yellow)}
 })();
 </script>
 <script>document.getElementById("year").textContent=new Date().getFullYear();</script>
+
+<script>
+/* Animations de la section portfolio uniquement. Les scripts existants sont conservés. */
+(() => {
+  const root = document.getElementById('portfolio');
+  if (!root) return;
+  const revealItems = root.querySelectorAll('.lm-reveal, .lm-steps');
+  const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!('IntersectionObserver' in window) || reduceMotion) {
+    revealItems.forEach(el => el.classList.add('is-visible'));
+    return;
+  }
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.14, rootMargin: '0px 0px -35px 0px' });
+  revealItems.forEach(el => observer.observe(el));
+})();
+</script>
 </body>
 </html>
