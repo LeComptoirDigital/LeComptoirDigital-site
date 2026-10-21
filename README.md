@@ -1,2 +1,2 @@
-# LeComptoirDigital-site
-Site vitrine officiel du Comptoir Digital Shop
+# NEMI Studio Digital
+Site vitrine officiel de NEMI Studio Digital.
